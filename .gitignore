@@ -1,0 +1,34 @@
+.DS_Store
+.claude/
+
+# Project notes and asset-generation tools are not needed at runtime.
+frutea-guide.md
+product.md
+tools/
+assets/README.md
+assets/PRODUCT_ELEMENT_ASSETS.md
+assets/brand-guideline/
+assets/3d/
+assets/glb/
+assets/png/
+game/build-assets.mjs
+game/sprites/
+
+# Deploy only the logo files used by the site.
+assets/Logo/*
+!assets/Logo/versions/
+assets/Logo/versions/*
+!assets/Logo/versions/favicon.png
+!assets/Logo/versions/horizontal-logo.png
+
+# Deploy only mascot poses referenced by index.html.
+assets/Mascot/*
+!assets/Mascot/adding-ice.png
+!assets/Mascot/celebrating.png
+!assets/Mascot/green-tea.png
+!assets/Mascot/happy.png
+!assets/Mascot/holding-lemon.png
+!assets/Mascot/main-mascot-clean.png
+!assets/Mascot/mixing-tea.png
+!assets/Mascot/shopping.png
+!assets/Mascot/waving-hello.png

@@ -1,0 +1,21 @@
+:root{--cream:#fff9ee;--wine:#57001e;--red:#e8143e;--yellow:#fff04d;--sky:#8fe1f5}
+*{box-sizing:border-box}
+html,body{margin:0;min-width:980px;height:100%;overflow:hidden;background:var(--wine)}
+body{font-family:'Nunito Sans',sans-serif;color:var(--wine)}
+button,a{font:inherit}
+.game-shell{height:100%;display:grid;grid-template-rows:74px minmax(0,1fr);background:var(--cream)}
+.game-bar{z-index:4;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 2.5vw;border-bottom:2px solid var(--wine);background:var(--cream)}
+.wordmark{display:flex;align-items:center;width:max-content}.wordmark img{display:block;width:154px;max-height:48px;object-fit:contain}
+.mission{font:700 .72rem 'Poppins',sans-serif;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.live-dot{display:inline-block;width:9px;height:9px;margin-right:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(232,20,62,.13);animation:pulse 1.5s ease-in-out infinite}
+.bar-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.icon-button{width:40px;height:40px;border:1.5px solid var(--wine);border-radius:6px;background:transparent;color:var(--wine);font:700 1rem 'Poppins',sans-serif;cursor:pointer;transition:.2s}
+.icon-button:hover{transform:translateY(-2px);background:var(--yellow)}
+.exit-link{margin-left:5px;padding:10px 17px;border-radius:6px;background:var(--wine);color:#fff;text-decoration:none;font:700 .72rem 'Poppins',sans-serif;text-transform:uppercase}
+.stage-wrap{position:relative;min-height:0;overflow:hidden;background:var(--sky)}
+#game{display:flex;width:100%;height:100%;align-items:center;justify-content:center}
+#game canvas{display:block;max-width:100%;max-height:100%}
+.controls-hint{position:absolute;z-index:2;left:50%;bottom:18px;display:flex;gap:22px;align-items:center;transform:translateX(-50%);padding:9px 15px;border:1px solid rgba(87,0,30,.2);border-radius:6px;background:rgba(255,249,238,.88);box-shadow:0 8px 30px rgba(87,0,30,.12);backdrop-filter:blur(8px);font:700 .62rem 'Poppins',sans-serif;text-transform:uppercase;white-space:nowrap;transition:opacity .35s,transform .35s}
+.controls-hint.hidden{opacity:0;transform:translate(-50%,12px);pointer-events:none}
+kbd{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-right:3px;border:1px solid rgba(87,0,30,.3);border-bottom-width:3px;border-radius:4px;background:#fff;font:700 .65rem 'Poppins',sans-serif}
+@keyframes pulse{50%{transform:scale(.72);opacity:.65}}
