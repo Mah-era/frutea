@@ -13,6 +13,8 @@ assets/brand-guideline/
 assets/3d/
 assets/glb/
 assets/png/
+assets/previews/
+assets/products/
 game/build-assets.mjs
 game/sprites/
 
@@ -25,12 +27,9 @@ game/sprites/
 !assets/PRODUCT_ELEMENT_ASSETS.md
 !assets/brand-guideline/
 !assets/brand-guideline/**
-!assets/glb/
-!assets/glb/**
-!assets/png/
-assets/png/*
-!assets/png/products-elements/
-!assets/png/products-elements/**
+!assets/products/
+!assets/products/**
+assets/products/v1/
 
 # Publish the current report source and final document, not archived drafts or workbooks.
 report to submit/*

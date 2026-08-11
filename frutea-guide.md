@@ -267,10 +267,10 @@ The project contains generated product and design assets under the `assets/` fol
 
 | Asset Type | Folder | Purpose |
 | ----- | ----- | ----- |
-| Section PNGs | `assets/png/` | Full website section captures |
-| Product PNGs | `assets/png/products-elements/` | Transparent product and element cutouts |
-| GLB Models | `assets/glb/` | glTF Binary 3D product and element models |
-| MP4 Clips | `assets/mp4/` | Short motion clips from section visuals |
+| Current Product PNGs | `assets/products/v2/png/` | Approved transparent product and element cutouts |
+| Current GLB Models | `assets/products/v2/glb/` | Approved glTF Binary 3D product and element models |
+| Local Archived Product Assets | `assets/products/v1/` | Git-excluded former range, pricing, and legacy OBJ files |
+| Optional Section Previews | `assets/previews/` | Generated PNG and MP4 website previews; excluded from deployment |
 
 **Product/Element Asset Examples:**
 

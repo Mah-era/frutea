@@ -4,8 +4,12 @@ const { chromium } = require('/Users/apple/.cache/codex-runtimes/codex-primary-r
 
 const root = path.resolve(__dirname, '..');
 const assets = path.join(root, 'assets');
-const pngDir = path.join(assets, 'png', 'products-elements');
-const glbDir = path.join(assets, 'glb');
+const version = process.env.FRUTEA_ASSET_VERSION || 'v2';
+const sourceHtml = path.resolve(process.env.FRUTEA_SOURCE_HTML || path.join(root, 'index.html'));
+const legacy = process.env.FRUTEA_LEGACY === '1';
+const productDir = path.join(assets, 'products', version);
+const pngDir = path.join(productDir, 'png');
+const glbDir = path.join(productDir, 'glb');
 
 for (const dir of [pngDir, glbDir]) fs.mkdirSync(dir, { recursive: true });
 
@@ -33,6 +37,15 @@ const productExports = [
   { name: 'mint-leaf', kind: 'leaf' },
   { name: 'striped-straw', kind: 'straw' }
 ];
+if (legacy) {
+  productExports.splice(5, 0,
+    { name: 'bulk-pouch-lemon', kind: 'pouch', flavour: 0 },
+    { name: 'bulk-pouch-mango', kind: 'pouch', flavour: 1 },
+    { name: 'bulk-pouch-lychee', kind: 'pouch', flavour: 2 },
+    { name: 'bulk-pouch-orange', kind: 'pouch', flavour: 3 },
+    { name: 'bulk-pouch-strawberry', kind: 'pouch', flavour: 4 }
+  );
+}
 
 function pad4(buffer, padByte = 0) {
   const padding = (4 - (buffer.length % 4)) % 4;
@@ -162,7 +175,7 @@ function writeGlbFromRealMeshes(name, exported) {
 (async () => {
   const browser = await chromium.launch({ args: ['--allow-file-access-from-files'] });
   const page = await browser.newPage({ viewport: { width: 1400, height: 1400 }, deviceScaleFactor: 1 });
-  await page.goto(`file://${path.join(root, 'index.html')}`, { waitUntil: 'networkidle' });
+  await page.goto(`file://${sourceHtml}`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(2500);
 
   for (const asset of productExports) {
@@ -182,7 +195,8 @@ function writeGlbFromRealMeshes(name, exported) {
 
       const makeObject = () => {
         if (asset.kind === 'stick') return makeStick(STICK_TEX[asset.flavour], STICK_BAK[asset.flavour]);
-        if (asset.kind === 'mix') return makeMixBox(MIX_BOX_TEX);
+        if (asset.kind === 'pouch') return makePouch(POUCH_TEX[asset.flavour], POUCH_BAK[asset.flavour]);
+        if (asset.kind === 'mix') return typeof makeMixBox === 'function' ? makeMixBox(MIX_BOX_TEX) : makeMixPouch(MIX_BOX_TEX);
         if (asset.kind === 'lowBox') return makeCarton(LOW_BOX_TEX, LOW_SIDE_TEX, 2.62, 3.35, .72);
         if (asset.kind === 'lowHoneyBox') return makeCarton(LOW_HONEY_BOX_TEX, LOW_HONEY_SIDE_TEX, 2.62, 3.35, .72);
         if (asset.kind === 'lowStick') return makeStick(LOW_STICK_TEX, LOW_STICK_BAK);
@@ -200,7 +214,8 @@ function writeGlbFromRealMeshes(name, exported) {
       const obj = makeObject();
       obj.rotation.y = asset.kind === 'slice' ? .25 : -.25;
       obj.rotation.x = asset.kind === 'slice' ? 1.18 : .04;
-      if (asset.kind === 'stick' || asset.kind.includes('Stick')) obj.scale.setScalar(.78);
+      if (asset.kind === 'pouch') obj.scale.setScalar(.82);
+      else if (asset.kind === 'stick' || asset.kind.includes('Stick')) obj.scale.setScalar(.78);
       else if (asset.kind.includes('Box') || asset.kind === 'mix') obj.scale.setScalar(.78);
       else if (asset.kind.includes('glass')) obj.scale.setScalar(.86);
       else if (asset.kind === 'straw') obj.scale.setScalar(.78);
@@ -271,14 +286,22 @@ function writeGlbFromRealMeshes(name, exported) {
 
   await browser.close();
 
-  const readme = `# Product and Element Assets
+  const sourceDescription = legacy
+    ? 'Recovered from the pre-pricing-update website source at commit `699ae60`.'
+    : 'Generated from the current `index.html` Three.js product builders.';
+  const rangeDescription = legacy
+    ? 'Historical reference only. This version contains former prices and the discontinued consumer bulk-pouch range.'
+    : 'Current approved range. Use this version for all new website, campaign, and presentation work.';
+  const readme = `# FruTea Product Assets ${version.toUpperCase()}
 
-Generated from the current \`index.html\` Three.js product builders.
+${sourceDescription}
 
-- PNG cutouts: \`assets/png/products-elements/\`
-- GLB meshes: \`assets/glb/\`
+${rangeDescription}
+
+- PNG cutouts: \`assets/products/${version}/png/\`
+- GLB meshes: \`assets/products/${version}/glb/\`
 
 The PNG files are transparent, uncropped product/element renders. The GLB files are glTF Binary exports from the actual Three.js objects used by the page, including geometry and embedded canvas texture maps where available.
 `;
-  fs.writeFileSync(path.join(assets, 'PRODUCT_ELEMENT_ASSETS.md'), readme);
+  fs.writeFileSync(path.join(productDir, 'README.md'), readme);
 })();

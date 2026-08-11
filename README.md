@@ -47,8 +47,8 @@ The game starts fresh on every reload and includes retro sound, flavour-specific
 ├── assets/
 │   ├── Logo/versions/               # Runtime logo assets
 │   ├── Mascot/                      # Mascot poses used by the website
-│   ├── png/products-elements/       # Approved transparent product renders
-│   ├── glb/                         # Approved 3D product and element exports
+│   ├── products/v1/                 # Local pre-update archive, excluded from Git
+│   ├── products/v2/                 # Current approved PNG and GLB assets
 │   └── brand-guideline/             # Product, packaging, and motion guidance
 ├── product.md                       # Current product and pricing source
 ├── frutea-guide.md                  # Brand and website source guide
@@ -60,7 +60,7 @@ The game starts fresh on every reload and includes retro sound, flavour-specific
     └── vendor/phaser-3.90.0.min.js  # Local Phaser runtime
 ```
 
-Deployment dependencies plus the current product specification, packaging guide, and approved product exports are tracked. Historical working files remain excluded.
+Deployment dependencies plus the current product specification, packaging guide, and approved `v2` product exports are tracked. Use `assets/products/v2/` for all new work. The local `v1` archive preserves the former pricing and range but is intentionally excluded from Git and deployment.
 
 ## Dependencies
 

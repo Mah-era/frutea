@@ -16,7 +16,9 @@ Recommended files:
 
 ## Product PNG Assets
 
-Folder: `../png/products-elements/`
+Current folder: `../products/v2/png/`
+
+Local-only archived folder: `../products/v1/png/`
 
 Important product files:
 
@@ -37,7 +39,7 @@ Important product files:
 
 ## Fruit And Garnish PNG Assets
 
-Folder: `../png/products-elements/`
+Current folder: `../products/v2/png/`
 
 - `lemon-whole.png`
 - `lemon-slice.png`
@@ -50,7 +52,9 @@ Folder: `../png/products-elements/`
 
 ## 3D And GLB Assets
 
-Folder: `../glb/`
+Current folder: `../products/v2/glb/`
+
+Local-only archived folder: `../products/v1/glb/`
 
 Use these for web and 3D scene work:
 
@@ -67,11 +71,11 @@ Use these for web and 3D scene work:
 - `ice-cube.glb`
 - `striped-straw.glb`
 
-Portable OBJ files are in `../3d/`.
+Archived portable OBJ prototypes are in `../products/v1/obj/`.
 
 ## Section Preview PNGs
 
-Folder: `../png/`
+Optional generated folder: `../previews/png/`
 
 - `hero.png`
 - `flavours.png`
@@ -82,7 +86,7 @@ Folder: `../png/`
 
 ## Motion Preview MP4s
 
-Folder: `../mp4/`
+Optional generated folder: `../previews/mp4/`
 
 - `hero.mp4`
 - `flavours.mp4`

@@ -5,11 +5,12 @@ const { chromium } = require('/Users/apple/.cache/codex-runtimes/codex-primary-r
 
 const root = path.resolve(__dirname, '..');
 const assets = path.join(root, 'assets');
-const pngDir = path.join(assets, 'png');
-const modelDir = path.join(assets, '3d');
-const mp4Dir = path.join(assets, 'mp4');
+const previewDir = path.join(assets, 'previews');
+const pngDir = path.join(previewDir, 'png');
+const modelDir = path.join(assets, 'products', 'v2', 'obj-prototypes');
+const mp4Dir = path.join(previewDir, 'mp4');
 
-for (const dir of [assets, pngDir, modelDir, mp4Dir]) {
+for (const dir of [pngDir, modelDir, mp4Dir]) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
@@ -69,15 +70,15 @@ function writeBoxObj(name, width, height, depth, color) {
 }
 
 function writeReadme() {
-  const readme = `# FruTea Assets
+  const readme = `# FruTea Website Previews
 
 Generated from the current single-file HTML project without changing \`index.html\`.
 
-- \`png/\`: still captures of the main visual sections.
-- \`3d/\`: simple portable OBJ product forms for sachet, mix box, low-sugar pack, and glass props.
-- \`mp4/\`: short motion clips built from the exported PNG captures.
+- \`assets/previews/png/\`: still captures of the main visual sections.
+- \`assets/previews/mp4/\`: short motion clips built from the PNG captures.
+- \`assets/products/v2/obj-prototypes/\`: simple portable OBJ product forms.
 `;
-  fs.writeFileSync(path.join(assets, 'README.md'), readme);
+  fs.writeFileSync(path.join(previewDir, 'README.md'), readme);
 }
 
 function makeMp4(name, imagePath) {
