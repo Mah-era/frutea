@@ -1,0 +1,165 @@
+{
+  "brand": {
+    "name": "FruTea Instant",
+    "category": "Instant fruit-flavoured tea powder",
+    "market": "Bangladesh",
+    "promise": "Quick fruit tea that can be served hot or iced."
+  },
+  "colors": {
+    "paperCream": "#FFF9EE",
+    "fruteaWine": "#57001E",
+    "deepWine": "#70002A",
+    "fruteaRed": "#E8143E",
+    "coral": "#FF5D63",
+    "lemonYellow": "#FFF04D",
+    "mangoOrange": "#FF8C1A",
+    "lycheePink": "#FF74A6",
+    "orangeCitrus": "#FF641F",
+    "strawberryRed": "#EF1748",
+    "skyBlue": "#8FE1F5",
+    "mintGreen": "#8FE59A",
+    "greenTeaDeep": "#17885F",
+    "honeyGold": "#F2B51D"
+  },
+  "flavours": {
+    "lemon": {
+      "name": "Lemon",
+      "base": "#FFF04D",
+      "deep": "#F4C400",
+      "band": "#FFFDF0",
+      "ink": "#57001E",
+      "drink": "#D9A724"
+    },
+    "mango": {
+      "name": "Mango",
+      "base": "#FFA12A",
+      "deep": "#F3661A",
+      "band": "#FFF4E4",
+      "ink": "#57001E",
+      "drink": "#E67622"
+    },
+    "lychee": {
+      "name": "Lychee",
+      "base": "#FF72A6",
+      "deep": "#E63272",
+      "band": "#FFF2F6",
+      "ink": "#57001E",
+      "drink": "#E85E8B"
+    },
+    "orange": {
+      "name": "Orange",
+      "base": "#FF7A20",
+      "deep": "#E54B0C",
+      "band": "#FFF3E4",
+      "ink": "#57001E",
+      "drink": "#E85A16"
+    },
+    "strawberry": {
+      "name": "Strawberry",
+      "base": "#F02A50",
+      "deep": "#B90034",
+      "band": "#FFEDEA",
+      "ink": "#57001E",
+      "drink": "#D2163F"
+    },
+    "lowSugarLemon": {
+      "name": "Low Sugar Green Tea Lemon",
+      "base": "#77D98D",
+      "deep": "#17885F",
+      "band": "#F1FFE8",
+      "ink": "#124D3A",
+      "accent": "#FFF04D",
+      "drink": "#B1B642"
+    },
+    "lowSugarHoneyLemon": {
+      "name": "Low Sugar Green Tea Honey-Lemon",
+      "base": "#B6DA77",
+      "deep": "#17885F",
+      "band": "#FFF4C3",
+      "ink": "#124D3A",
+      "accent": "#F2B51D",
+      "drink": "#C89A31"
+    }
+  },
+  "typography": {
+    "heading": "Fredoka, system-ui, sans-serif",
+    "product": "Poppins, system-ui, sans-serif",
+    "body": "Nunito Sans, system-ui, sans-serif",
+    "flavour": "Swipe, Fredoka, system-ui, sans-serif"
+  },
+  "products": [
+    {
+      "name": "FruTea Instant Lemon Tea",
+      "flavour": "Lemon",
+      "packType": "Single sachet",
+      "quantity": "15g",
+      "servings": "1 cup",
+      "price": "৳20"
+    },
+    {
+      "name": "FruTea Instant Mango Tea",
+      "flavour": "Mango",
+      "packType": "Single sachet",
+      "quantity": "15g",
+      "servings": "1 cup",
+      "price": "৳20"
+    },
+    {
+      "name": "FruTea Instant Lychee Tea",
+      "flavour": "Lychee",
+      "packType": "Single sachet",
+      "quantity": "15g",
+      "servings": "1 cup",
+      "price": "৳20"
+    },
+    {
+      "name": "FruTea Instant Orange Tea",
+      "flavour": "Orange",
+      "packType": "Single sachet",
+      "quantity": "15g",
+      "servings": "1 cup",
+      "price": "৳20"
+    },
+    {
+      "name": "FruTea Instant Strawberry Tea",
+      "flavour": "Strawberry",
+      "packType": "Single sachet",
+      "quantity": "15g",
+      "servings": "1 cup",
+      "price": "৳20"
+    },
+    {
+      "name": "FruTea Mix Pack",
+      "flavour": "Assorted flavours",
+      "packType": "Box pack",
+      "quantity": "10 sachets x 15g",
+      "servings": "10 cups",
+      "price": "৳200"
+    },
+    {
+      "name": "FruTea Low Sugar Green Tea Lemon",
+      "flavour": "Lemon",
+      "packType": "Single sachet",
+      "quantity": "12g",
+      "servings": "1 cup",
+      "price": "৳35",
+      "launch": "Year 2, after completing Year 1"
+    },
+    {
+      "name": "FruTea Low Sugar Green Tea Honey-Lemon",
+      "flavour": "Honey-lemon",
+      "packType": "Single sachet",
+      "quantity": "12g",
+      "servings": "1 cup",
+      "price": "৳35",
+      "launch": "Year 2, after completing Year 1"
+    }
+  ],
+  "motion": {
+    "idleLoopSeconds": [4, 7],
+    "packTransitionSeconds": [0.7, 1.2],
+    "scrollScrub": 1.25,
+    "iceBobAmount": 0.045,
+    "alwaysOnWidgetWidth": 196
+  }
+}

@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="../assets/Logo/versions/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="game.css?v=13">
+  <link rel="stylesheet" href="game.css?v=16">
 </head>
 <body>
   <main class="game-shell">
@@ -26,10 +26,15 @@
       <div class="controls-hint" aria-hidden="true">
         <span><kbd>A</kbd><kbd>D</kbd> move</span><span><kbd>W</kbd> or <kbd>Space</kbd> jump</span><span>Jump on phones</span>
       </div>
+      <div class="touch-pad" aria-label="Touch controls">
+        <button class="touch-button" type="button" data-control="left" aria-label="Move left">A</button>
+        <button class="touch-button" type="button" data-control="right" aria-label="Move right">D</button>
+        <button class="touch-button jump" type="button" data-control="jump" aria-label="Jump">Jump</button>
+      </div>
     </section>
   </main>
   <script src="vendor/phaser-3.90.0.min.js"></script>
-  <script src="assets.generated.js?v=13"></script>
-  <script src="game.js?v=13"></script>
+  <script src="assets.generated.js?v=16"></script>
+  <script src="game.js?v=16"></script>
 </body>
 </html>

@@ -1,0 +1,88 @@
+:root {
+  --frutea-paper: #FFF9EE;
+  --frutea-wine: #57001E;
+  --frutea-deep-wine: #70002A;
+  --frutea-red: #E8143E;
+  --frutea-coral: #FF5D63;
+  --frutea-lemon: #FFF04D;
+  --frutea-mango: #FF8C1A;
+  --frutea-lychee: #FF74A6;
+  --frutea-orange: #FF641F;
+  --frutea-strawberry: #EF1748;
+  --frutea-sky: #8FE1F5;
+  --frutea-mint: #8FE59A;
+  --frutea-green-deep: #17885F;
+  --frutea-honey: #F2B51D;
+
+  --frutea-font-heading: "Fredoka", system-ui, sans-serif;
+  --frutea-font-product: "Poppins", system-ui, sans-serif;
+  --frutea-font-body: "Nunito Sans", system-ui, sans-serif;
+  --frutea-font-flavour: "Swipe", "Fredoka", system-ui, sans-serif;
+
+  --frutea-radius-small: 6px;
+  --frutea-radius-medium: 8px;
+  --frutea-shadow-offset: 4px 4px 0 rgba(87, 0, 30, 0.18);
+
+  --frutea-motion-idle-min: 4s;
+  --frutea-motion-idle-max: 7s;
+  --frutea-motion-pack: 0.9s;
+  --frutea-scroll-scrub: 1.25;
+}
+
+[data-frutea-flavour="lemon"] {
+  --flavour-base: #FFF04D;
+  --flavour-deep: #F4C400;
+  --flavour-band: #FFFDF0;
+  --flavour-ink: #57001E;
+  --flavour-drink: #D9A724;
+}
+
+[data-frutea-flavour="mango"] {
+  --flavour-base: #FFA12A;
+  --flavour-deep: #F3661A;
+  --flavour-band: #FFF4E4;
+  --flavour-ink: #57001E;
+  --flavour-drink: #E67622;
+}
+
+[data-frutea-flavour="lychee"] {
+  --flavour-base: #FF72A6;
+  --flavour-deep: #E63272;
+  --flavour-band: #FFF2F6;
+  --flavour-ink: #57001E;
+  --flavour-drink: #E85E8B;
+}
+
+[data-frutea-flavour="orange"] {
+  --flavour-base: #FF7A20;
+  --flavour-deep: #E54B0C;
+  --flavour-band: #FFF3E4;
+  --flavour-ink: #57001E;
+  --flavour-drink: #E85A16;
+}
+
+[data-frutea-flavour="strawberry"] {
+  --flavour-base: #F02A50;
+  --flavour-deep: #B90034;
+  --flavour-band: #FFEDEA;
+  --flavour-ink: #57001E;
+  --flavour-drink: #D2163F;
+}
+
+[data-frutea-flavour="low-sugar-lemon"] {
+  --flavour-base: #77D98D;
+  --flavour-deep: #17885F;
+  --flavour-band: #F1FFE8;
+  --flavour-ink: #124D3A;
+  --flavour-accent: #FFF04D;
+  --flavour-drink: #B1B642;
+}
+
+[data-frutea-flavour="low-sugar-honey-lemon"] {
+  --flavour-base: #B6DA77;
+  --flavour-deep: #17885F;
+  --flavour-band: #FFF4C3;
+  --flavour-ink: #124D3A;
+  --flavour-accent: #F2B51D;
+  --flavour-drink: #C89A31;
+}

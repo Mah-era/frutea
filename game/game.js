@@ -110,16 +110,31 @@
     }
     startGame(){if(run.started)return;run.started=true;run.paused=false;this.overlay?.destroy();this.physics.resume();document.querySelector('.controls-hint')?.classList.add('hidden');audio.startMusic();audio.sfx('checkpoint');}
     bindControls(){
+      this.touchInput={left:false,right:false};
       this.keys=this.input.keyboard.addKeys({left:'A',right:'D',up:'W',space:'SPACE',la:'LEFT',ra:'RIGHT',ua:'UP'});this.input.keyboard.on('keydown-ESC',()=>this.togglePause());
       this.input.keyboard.on('keydown-A',()=>this.arcadeNudge(-1));this.input.keyboard.on('keydown-LEFT',()=>this.arcadeNudge(-1));this.input.keyboard.on('keydown-D',()=>this.arcadeNudge(1));this.input.keyboard.on('keydown-RIGHT',()=>this.arcadeNudge(1));
       this.input.keyboard.on('keydown-W',()=>this.queueJump());this.input.keyboard.on('keydown-UP',()=>this.queueJump());this.input.keyboard.on('keydown-SPACE',()=>this.queueJump());
       document.getElementById('pause-button').addEventListener('click',()=>this.togglePause());document.getElementById('sound-button').addEventListener('click',e=>{run.sound=audio.toggle();e.currentTarget.textContent=run.sound?'♪':'×';e.currentTarget.setAttribute('aria-pressed',String(!run.sound));});
+      document.querySelectorAll('[data-control]').forEach(button=>{
+        const control=button.dataset.control;
+        const set=(down)=>{
+          button.classList.toggle('is-down',down);
+          if(control==='jump'&&down)this.queueJump();
+          if(control==='left'||control==='right')this.touchInput[control]=down;
+        };
+        button.addEventListener('pointerdown',e=>{e.preventDefault();button.setPointerCapture?.(e.pointerId);set(true);});
+        button.addEventListener('pointerup',()=>set(false));
+        button.addEventListener('pointercancel',()=>set(false));
+        button.addEventListener('pointerleave',()=>set(false));
+      });
     }
     arcadeNudge(direction){if(!run.started||run.paused||run.finished||this.state==='hurt')return;this.lastInputAt=this.time.now;const current=this.player.body.velocity.x;this.player.setVelocityX(direction<0?Math.min(current,-320):Math.max(current,320));}
     queueJump(){if(!run.started||run.paused||run.finished||this.state==='hurt')return;this.lastInputAt=this.time.now;this.jumpQueuedAt=this.time.now;}
     togglePause(){
       if(!run.started||run.finished||this.state==='hurt')return;run.paused=!run.paused;
-      if(!run.paused){this.physics.resume();this.pauseCard?.destroy();this.pauseCard=null;return;}
+      const pauseButton=document.getElementById('pause-button');
+      if(!run.paused){this.physics.resume();this.pauseCard?.destroy();this.pauseCard=null;if(pauseButton){pauseButton.textContent='Ⅱ';pauseButton.setAttribute('aria-label','Pause game');}return;}
+      if(pauseButton){pauseButton.textContent='▶';pauseButton.setAttribute('aria-label','Resume game');}
       this.physics.pause();this.pauseCard=this.add.container(W/2,H/2).setScrollFactor(0).setDepth(60);this.pauseCard.add([this.add.rectangle(0,0,500,230,C.cream).setStrokeStyle(5,C.wine),this.add.text(0,-38,'TEA BREAK PAUSED',{fontFamily:'Fredoka, sans-serif',fontSize:'43px',fontStyle:'bold',color:'#57001e'}).setOrigin(.5),this.add.text(0,40,'Press Esc or pause to jump back in',{fontFamily:'Nunito Sans, sans-serif',fontSize:'20px',color:'#7d2940'}).setOrigin(.5)]);
     }
     mood(name,ms=0){
@@ -144,7 +159,8 @@
     }
     respawn(){
       this.player.setPosition(this.spawnX,600).setVelocity(0,0).clearTint().setAlpha(1);this.player.body.checkCollision.none=false;this.state='air';this.invulnerable=true;this.cameras.main.fadeIn(220,255,249,238);this.mood('confident',600);
-      this.tweens.add({targets:this.player,alpha:.25,duration:90,yoyo:true,repeat:5,onComplete:()=>{this.player.setAlpha(1);this.invulnerable=false;}});
+      this.recoveryTimer?.remove();this.recoveryTimer=this.time.delayedCall(1160,()=>{this.invulnerable=false;this.player.setAlpha(1);this.recoveryTimer=null;});
+      this.tweens.add({targets:this.player,alpha:.25,duration:90,yoyo:true,repeat:5,onComplete:()=>this.player.setAlpha(1)});
     }
     gameOver(){
       this.physics.pause();run.paused=true;const p=this.add.container(W/2,H/2).setScrollFactor(0).setDepth(70),shade=this.add.rectangle(0,0,W,H,C.wine,.92),hero=this.add.image(-290,0,'mascot-sad').setDisplaySize(330,330),title=this.add.text(110,-92,'OUT OF TEA ENERGY',{fontFamily:'Fredoka, sans-serif',fontSize:'58px',fontStyle:'bold',color:'#fff04d'}).setOrigin(.5),copy=this.add.text(110,-10,'Fresh run. Fresh fruit. Same big comeback.',{fontFamily:'Nunito Sans, sans-serif',fontSize:'22px',fontStyle:'bold',color:'#fff9ee'}).setOrigin(.5),button=this.add.rectangle(110,98,250,66,C.red).setStrokeStyle(3,C.cream).setInteractive({useHandCursor:true}),label=this.add.text(110,98,'START FRESH',{fontFamily:'Poppins',fontSize:'19px',fontStyle:'bold',color:'#fff'}).setOrigin(.5);button.on('pointerdown',()=>location.reload());p.add([shade,hero,title,copy,button,label]);
@@ -171,7 +187,7 @@
     }
     update(time){
       if(!run.started||run.finished||run.paused||this.state==='hurt')return;
-      const left=this.keys.left.isDown||this.keys.la.isDown,right=this.keys.right.isDown||this.keys.ra.isDown,jumpDown=Phaser.Input.Keyboard.JustDown(this.keys.up)||Phaser.Input.Keyboard.JustDown(this.keys.space)||Phaser.Input.Keyboard.JustDown(this.keys.ua);
+      const left=this.keys.left.isDown||this.keys.la.isDown||this.touchInput.left,right=this.keys.right.isDown||this.keys.ra.isDown||this.touchInput.right,jumpDown=Phaser.Input.Keyboard.JustDown(this.keys.up)||Phaser.Input.Keyboard.JustDown(this.keys.space)||Phaser.Input.Keyboard.JustDown(this.keys.ua);
       const grounded=this.player.body.blocked.down||this.player.body.touching.down;if(grounded){this.lastGroundedAt=time;if(this.state==='air')this.squash();this.state='ground';}
       if(jumpDown)this.jumpQueuedAt=time;
       if(left&&!right){this.lastInputAt=time;this.player.setAccelerationX(-2600).setFlipX(true);if(grounded&&!this.moodTimer)this.mood('running');}else if(right&&!left){this.lastInputAt=time;this.player.setAccelerationX(2600).setFlipX(false);if(grounded&&!this.moodTimer)this.mood('running');}else{this.player.setAccelerationX(0);if(grounded&&!this.moodTimer){if(time-this.lastInputAt>2400){const idle=['playful','curious','dancing','cool'][this.idleIndex++%4];this.mood(idle,1050);this.lastInputAt=time;}else this.mood('main-mascot-clean');}}

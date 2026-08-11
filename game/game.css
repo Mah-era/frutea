@@ -18,4 +18,24 @@ button,a{font:inherit}
 .controls-hint{position:absolute;z-index:2;left:50%;bottom:18px;display:flex;gap:22px;align-items:center;transform:translateX(-50%);padding:9px 15px;border:1px solid rgba(87,0,30,.2);border-radius:6px;background:rgba(255,249,238,.88);box-shadow:0 8px 30px rgba(87,0,30,.12);backdrop-filter:blur(8px);font:700 .62rem 'Poppins',sans-serif;text-transform:uppercase;white-space:nowrap;transition:opacity .35s,transform .35s}
 .controls-hint.hidden{opacity:0;transform:translate(-50%,12px);pointer-events:none}
 kbd{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-right:3px;border:1px solid rgba(87,0,30,.3);border-bottom-width:3px;border-radius:4px;background:#fff;font:700 .65rem 'Poppins',sans-serif}
+.touch-pad{position:absolute;z-index:3;inset:auto 24px 24px;display:none;grid-template-columns:64px 64px 1fr;gap:10px;pointer-events:none}
+.touch-button{height:58px;border:2px solid var(--wine);border-radius:8px;background:rgba(255,249,238,.9);color:var(--wine);box-shadow:4px 5px 0 rgba(87,0,30,.22);font:700 .85rem 'Poppins',sans-serif;text-transform:uppercase;pointer-events:auto;touch-action:none;user-select:none}
+.touch-button:active,.touch-button.is-down{transform:translate(2px,2px);box-shadow:2px 3px 0 rgba(87,0,30,.24);background:var(--yellow)}
+.touch-button.jump{justify-self:end;width:min(190px,32vw);background:var(--red);color:#fff}
 @keyframes pulse{50%{transform:scale(.72);opacity:.65}}
+@media (pointer:coarse),(max-width:860px){
+  html,body{min-width:0}
+  .game-shell{grid-template-rows:64px minmax(0,1fr)}
+  .game-bar{grid-template-columns:auto 1fr auto;padding:0 12px;gap:10px}
+  .wordmark img{width:122px}
+  .mission{font-size:.55rem;text-align:center;white-space:normal}
+  .bar-actions{gap:6px}
+  .icon-button{width:36px;height:36px}
+  .exit-link{display:none}
+  .controls-hint{display:none}
+  .touch-pad{display:grid}
+}
+@media (pointer:coarse) and (orientation:portrait),(max-width:560px){
+  .stage-wrap::before{content:"Turn sideways for the full run";position:absolute;z-index:4;left:50%;top:76px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 28px);padding:8px 12px;border:1.5px solid var(--wine);border-radius:6px;background:rgba(255,249,238,.92);box-shadow:4px 5px 0 rgba(87,0,30,.16);font:700 .62rem 'Poppins',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--wine)}
+  #game{align-items:flex-start;padding-top:150px}
+}

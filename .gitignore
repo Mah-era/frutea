@@ -1,4 +1,6 @@
 .DS_Store
+__pycache__/
+*.pyc
 .claude/
 
 # Project notes and asset-generation tools are not needed at runtime.
@@ -13,6 +15,29 @@ assets/glb/
 assets/png/
 game/build-assets.mjs
 game/sprites/
+
+# Keep the current commercial source, approved product exports, and generators in Git.
+!frutea-guide.md
+!product.md
+!tools/
+!tools/**
+!assets/README.md
+!assets/PRODUCT_ELEMENT_ASSETS.md
+!assets/brand-guideline/
+!assets/brand-guideline/**
+!assets/glb/
+!assets/glb/**
+!assets/png/
+assets/png/*
+!assets/png/products-elements/
+!assets/png/products-elements/**
+
+# Publish the current report source and final document, not archived drafts or workbooks.
+report to submit/*
+!report to submit/12_14_SupplyChain_Operations_Mahera.md
+!report to submit/FruTea_12_14_SupplyChain_Operations_Mahera_v7.docx
+
+.DS_Store
 
 # Deploy only the logo files used by the site.
 assets/Logo/*

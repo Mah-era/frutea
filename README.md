@@ -12,11 +12,18 @@ FruTea is an interactive product website for a fruit-flavoured instant tea brand
 
 - Animated 3D FruTea packaging and product scenes
 - Five flavour presentations with tailored visual treatments
-- Hot-or-iced and low-sugar product sections
+- Hot-or-iced service story and a scroll-reveal for the planned Year 2 Low Sugar range
 - Product selection and preparation guidance
 - Interactive FruTea mascot guide
 - Smooth scroll-based transitions and motion
 - Direct access to the Fruit Rush game
+
+## Current Product Plan
+
+- Five 15g single-sachet flavours at BDT 20 per cup
+- Ten-sachet, five-flavour Mix Pack at BDT 200
+- No consumer bulk-pouch format in the current range
+- Low Sugar Green Tea planned for Year 2 at BDT 35 per 12g sachet
 
 ## Fruit Rush
 
@@ -39,7 +46,12 @@ The game starts fresh on every reload and includes retro sound, flavour-specific
 ├── index.html                       # Main FruTea website
 ├── assets/
 │   ├── Logo/versions/               # Runtime logo assets
-│   └── Mascot/                      # Mascot poses used by the website
+│   ├── Mascot/                      # Mascot poses used by the website
+│   ├── png/products-elements/       # Approved transparent product renders
+│   ├── glb/                         # Approved 3D product and element exports
+│   └── brand-guideline/             # Product, packaging, and motion guidance
+├── product.md                       # Current product and pricing source
+├── frutea-guide.md                  # Brand and website source guide
 └── game/
     ├── index.html                   # Game page
     ├── game.css                     # Game interface styling
@@ -48,7 +60,7 @@ The game starts fresh on every reload and includes retro sound, flavour-specific
     └── vendor/phaser-3.90.0.min.js  # Local Phaser runtime
 ```
 
-Only deployment dependencies are tracked. Source asset libraries, project notes, unused exports, and asset-generation tools are excluded through `.gitignore`.
+Deployment dependencies plus the current product specification, packaging guide, and approved product exports are tracked. Historical working files remain excluded.
 
 ## Dependencies
 
@@ -77,4 +89,3 @@ http://localhost:4174/
 ## Deployment
 
 The public site is deployed with GitHub Pages from the root of the `main` branch. Pushing a new commit to `main` triggers a new Pages build.
-

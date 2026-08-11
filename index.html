@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FruTea Instant — Fruit Tea, Turned All the Way Up</title>
-<meta name="description" content="FruTea instant fruit-flavoured tea powder in five flavours. Choose a 15g single sachet, 200g bulk pouch or ten-sachet Mix Pack for hot or iced serves.">
+<meta name="description" content="FruTea instant fruit-flavoured tea powder in five flavours. Choose a ৳20 single sachet or the ten-sachet ৳200 Mix Pack for hot or iced serves.">
 <link rel="icon" type="image/png" href="assets/Logo/versions/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -204,6 +204,17 @@
   .ls-specs strong{display:block;font-family:var(--font-product);font-size:1.4rem;line-height:1;color:#124D3A}
   .ls-specs span{display:block;margin-top:7px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#39705E}
   .ls-note{position:absolute;right:4vw;bottom:50px;font-family:var(--font-product);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#124D3A}
+  .ls-curtain{position:absolute;inset:-2px;z-index:6;overflow:hidden;pointer-events:none;color:#FFF9EE;will-change:transform;
+    background:linear-gradient(90deg,#70002A 0 49.7%,#57001E 49.7% 50.3%,#70002A 50.3% 100%);box-shadow:0 18px 40px rgba(87,0,30,.28)}
+  .ls-curtain::before,.ls-curtain::after{content:"";position:absolute;inset:0 50% 0 0;opacity:.28;
+    background:repeating-linear-gradient(90deg,transparent 0 8%,rgba(255,255,255,.16) 8% 10%,transparent 10% 20%)}
+  .ls-curtain::after{inset:0 0 0 50%;transform:scaleX(-1)}
+  .ls-curtain-inner{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(680px,72vw);text-align:center}
+  .ls-curtain-kicker{display:block;font:700 .76rem var(--font-product);letter-spacing:.24em;text-transform:uppercase;color:#8FE59A}
+  .ls-curtain h2{margin-top:14px;font-size:clamp(4rem,8vw,7.4rem);line-height:.82;color:#FFF04D;text-shadow:5px 5px 0 #E8143E}
+  .ls-curtain p{margin:26px auto 0;max-width:36ch;font-weight:700;font-size:1.05rem;color:#FFF9EE}
+  .ls-curtain-price{display:inline-flex;margin-top:26px;padding:10px 18px;border:2px solid #FFF9EE;background:#17885F;
+    box-shadow:5px 5px 0 #FFF04D;font:700 .78rem var(--font-product);letter-spacing:.12em;text-transform:uppercase}
 
   /* ---------- RITUAL ---------- */
   #ritual{padding:15vh 0;position:relative;overflow:hidden;background:var(--bg)}
@@ -792,7 +803,7 @@
     <li><a href="#low-sugar">Low Sugar</a></li>
     <li><a href="#ritual">How it works</a></li>
     <li><a href="#collection">Pick yours</a></li>
-    <li><a href="game/index.html?v=13">Play</a></li>
+    <li><a href="game/index.html?v=16">Play</a></li>
   </ul>
 </nav>
 
@@ -802,13 +813,13 @@
   <div class="hero-orbit" aria-hidden="true"><i></i><i></i></div>
   <canvas id="hero-canvas"></canvas>
   <span class="sticker red pop" style="--rot:-7deg;top:16vh;left:40vw"><i>Made for Dhaka!</i></span>
-  <span class="sticker sky pop" style="--rot:7deg;bottom:13vh;left:34vw"><i>৳35 a cup!</i></span>
+  <span class="sticker sky pop" style="--rot:7deg;bottom:13vh;left:34vw"><i>৳20 a cup!</i></span>
   <span class="burst pop" style="--rot:10deg;top:56vh;right:6vw"><span>Hot ☀<br>or iced ❄</span></span>
   <div class="hero-grid">
     <div class="hero-copy">
       <span class="eyebrow">Instant fruit-flavoured tea powder · hot or iced</span>
       <h1>Fruit tea, turned<br><em class="c1 squig">all the way up.</em></h1>
-      <p class="lede">Five juicy fruit flavours in a quick tear-and-stir sachet. Serve it warm or over ice, starting from ৳35.</p>
+      <p class="lede">Five juicy fruit flavours in a quick tear-and-stir sachet. Serve it warm or over ice, starting from ৳20.</p>
       <div class="cta-row">
         <a class="btn solid flavour-pick" href="#flavours"><span>Pick a flavour</span></a>
         <a class="btn line" href="#hotcold">Hot or iced?</a>
@@ -819,7 +830,7 @@
   <div class="hero-meta">
     <span>Tear · pour · stir</span>
     <span>Five fruit flavours · hot or iced</span>
-    <span>Starts at ৳35</span>
+    <span>Starts at ৳20</span>
   </div>
 </section>
 
@@ -837,7 +848,7 @@
       <span>Tear sachet</span>
       <span>Pour hot or cold</span>
       <span>Fruit tea glass</span>
-      <span>৳35 start</span>
+      <span>৳20 start</span>
     </div>
   </div>
 </section>
@@ -848,39 +859,39 @@
   <canvas id="flav-canvas"></canvas>
   <span class="sticker pink pop" style="--rot:6deg;bottom:16vh;right:7vw"><i>Collect all 5!</i></span>
   <div class="flav-ui">
-    <div class="flav-head"><span class="eyebrow">Five flavours · sachets, bulk pouches and Mix Pack</span></div>
+    <div class="flav-head"><span class="eyebrow">Five flavours · single sachets and Mix Pack</span></div>
     <div class="flav-index" id="flav-index">01 / 06</div>
-    <div class="flav-stage-note">15g sachet + 200g bulk pouch</div>
+    <div class="flav-stage-note">15g single sachet · ৳20</div>
     <div class="flav-name" id="flav-name">
       <div class="item">
         <h3>Lemon<br><em>— sharp &amp; bright</em></h3>
-        <p class="desc">The crisp citrus choice: bright lemon fruit flavour in a one-cup sachet or a larger bulk pouch.</p>
-        <div class="formats"><span><b>৳35</b> — 15g single sachet · 1 cup</span><span><b>৳400</b> — 200g bulk pouch</span></div>
+        <p class="desc">A clean citrus hit with a bright finish, packed for one quick hot or iced cup.</p>
+        <div class="formats"><span><b>৳20</b> — 15g single sachet · 1 cup</span></div>
       </div>
       <div class="item">
         <h3>Mango<br><em>— summer, stirred</em></h3>
-        <p class="desc">A round, sunny mango flavour available as a quick single sachet or a repeat-use bulk pouch.</p>
-        <div class="formats"><span><b>৳35</b> — 15g single sachet · 1 cup</span><span><b>৳400</b> — 200g bulk pouch</span></div>
+        <p class="desc">Ripe mango energy in a tear-and-stir sachet made for a sunny tea break.</p>
+        <div class="formats"><span><b>৳20</b> — 15g single sachet · 1 cup</span></div>
       </div>
       <div class="item">
         <h3>Lychee<br><em>— sweet, slightly extra</em></h3>
-        <p class="desc">A softer, fragrant fruit-tea mood in the 15g single sachet and the 200g bulk pouch.</p>
-        <div class="formats"><span><b>৳35</b> — 15g single sachet · 1 cup</span><span><b>৳400</b> — 200g bulk pouch</span></div>
+        <p class="desc">Soft, fragrant and playful, with a floral fruit note that works hot or iced.</p>
+        <div class="formats"><span><b>৳20</b> — 15g single sachet · 1 cup</span></div>
       </div>
       <div class="item">
         <h3>Orange<br><em>— citrus with attitude</em></h3>
-        <p class="desc">Straightforward orange fruit flavour for one colourful cup or a bigger pouch for later.</p>
-        <div class="formats"><span><b>৳35</b> — 15g single sachet · 1 cup</span><span><b>৳400</b> — 200g bulk pouch</span></div>
+        <p class="desc">Tangy orange flavour with enough zing to wake up an ordinary tea break.</p>
+        <div class="formats"><span><b>৳20</b> — 15g single sachet · 1 cup</span></div>
       </div>
       <div class="item">
         <h3>Strawberry<br><em>— pink drink energy</em></h3>
-        <p class="desc">The bold berry choice in the range, packed as a 15g single sachet or 200g bulk pouch.</p>
-        <div class="formats"><span><b>৳35</b> — 15g single sachet · 1 cup</span><span><b>৳400</b> — 200g bulk pouch</span></div>
+        <p class="desc">Bold berry flavour, bright pink energy and a cup that refuses to be background.</p>
+        <div class="formats"><span><b>৳20</b> — 15g single sachet · 1 cup</span></div>
       </div>
       <div class="item">
         <h3>Mix Pack<br><em>— all five, one box</em></h3>
         <p class="desc">Ten assorted 15g sachets for flavour-switchers, shared desks, family tables and first-time FruTea explorers.</p>
-        <div class="formats"><span><b>৳220</b> — 10 × 15g sachets · 10 cups</span><span><b>5 flavours</b> — one colourful discovery box</span></div>
+        <div class="formats"><span><b>৳200</b> — 10 × 15g sachets · 10 cups</span><span><b>5 flavours</b> — one colourful discovery box</span></div>
       </div>
     </div>
     <div class="flav-rail" id="flav-rail" aria-hidden="true"><span class="active">Lemon</span><span>Mango</span><span>Lychee</span><span>Orange</span><span>Strawberry</span><span>Mix Pack</span></div>
@@ -913,27 +924,35 @@
 <!-- ============ LOW SUGAR GREEN TEA ============ -->
 <section id="low-sugar">
   <canvas id="ls-canvas"></canvas>
+  <div class="ls-curtain" aria-label="FruTea Low Sugar Green Tea coming after Year 1">
+    <div class="ls-curtain-inner">
+      <span class="ls-curtain-kicker">The next tea break is loading</span>
+      <h2>Coming<br>Soon</h2>
+      <p>FruTea Low Sugar Green Tea arrives after Year 1, with Lemon and Honey-Lemon at ৳35 per sachet.</p>
+      <span class="ls-curtain-price">Year 2 launch · ৳35</span>
+    </div>
+  </div>
   <div class="ls-ui">
     <div class="ls-copy">
-      <span class="eyebrow">Two low sugar green tea boxes · 10 cups each</span>
+      <span class="eyebrow">Planned for Year 2 · low sugar green tea</span>
       <div class="ls-panels">
         <div class="ls-panel active" data-low-panel="lemon">
           <h2>Lemon green tea.<em><span class="squig">Light, sharp, bright.</span></em></h2>
-          <p class="lede">FruTea Low Sugar Green Tea Lemon keeps the citrus lift clear and clean with a green tea base, packed as ten 12g sachets.</p>
+          <p class="lede">A lighter lemon-green-tea serve planned for after FruTea completes Year 1, packed as a one-cup 12g sachet.</p>
         </div>
         <div class="ls-panel" data-low-panel="honey">
           <h2>Honey-lemon green tea.<em><span class="squig">Soft, golden, light.</span></em></h2>
-          <p class="lede">FruTea Low Sugar Green Tea Honey-Lemon adds a warmer honey note to the lemon-green-tea serve, with the same ten-sachet box format.</p>
+          <p class="lede">A soft honey-lemon note over a green tea base, planned as a one-cup 12g sachet for the Year 2 range.</p>
         </div>
       </div>
       <div class="ls-switch" aria-hidden="true"><span class="active">Lemon</span><span>Honey-lemon</span></div>
       <div class="ls-specs">
-        <div><strong>10 × 12g</strong><span>Single-serve sachets</span></div>
-        <div><strong>10 cups</strong><span>One box</span></div>
-        <div><strong>৳300</strong><span>Proposed price</span></div>
+        <div><strong>12g</strong><span>Single-serve sachet</span></div>
+        <div><strong>Year 2</strong><span>After completing Year 1</span></div>
+        <div><strong>৳35</strong><span>Planned price</span></div>
       </div>
     </div>
-    <div class="ls-note">Lemon box · honey-lemon box · green tea base</div>
+    <div class="ls-note">Lemon · honey-lemon · green tea base · coming in Year 2</div>
     <span class="sticker mint pop" style="--rot:-6deg;top:14vh;left:44vw"><i>Lighter!</i></span>
   </div>
 </section>
@@ -959,16 +978,16 @@
   <div class="wrap">
     <div class="sec-head sr">
       <div><span class="eyebrow">Choose yours</span><h2>Flavour. Mood. Pack.<br><em>Three easy decisions.</em></h2></div>
-      <p class="sec-sub">Start with a flavour, choose hot or iced, then match the pack to one cup, ten discoveries or repeat serves.</p>
+      <p class="sec-sub">Start with a flavour, choose hot or iced, then pick one sachet or ten assorted discoveries.</p>
     </div>
     <div class="choice-grid">
       <article class="choice-card sr" data-rot="0"><span class="choice-no">01 · Pick a flavour</span><h3>What energy<br>are you on?</h3><p>Sharp lemon, sunny mango, floral lychee, tangy orange, or bold strawberry.</p><div class="choice-tags"><span>Lemon</span><span>Mango</span><span>Lychee</span><span>Orange</span><span>Strawberry</span></div></article>
       <article class="choice-card sr" data-rot="0"><span class="choice-no">02 · Pick the mood</span><h3>Cozy hot or<br>ice-cold loud?</h3><p>One fruity tea idea, two completely different breaks. Follow the weather or ignore it.</p><div class="choice-tags"><span>Hot cup</span><span>Iced glass</span><span>Instant mix</span></div></article>
-      <article class="choice-card sr" data-rot="0"><span class="choice-no">03 · Pick a pack</span><h3>One now or<br>more for later?</h3><p>Single sachets for one cup, the ten-sachet Mix Pack for variety, or a 200g bulk pouch for repeat serves.</p><div class="choice-tags"><span>Single ৳35</span><span>Mix ৳220</span><span>Bulk ৳400</span></div></article>
+      <article class="choice-card sr" data-rot="0"><span class="choice-no">03 · Pick a pack</span><h3>One favourite or<br>all five?</h3><p>Grab a single sachet for today or the ten-sachet Mix Pack when choosing one flavour feels impossible.</p><div class="choice-tags"><span>Single ৳20</span><span>Mix Pack ৳200</span></div></article>
     </div>
     <div class="collection-note sr">
       <span>Proposed pricing in Bangladeshi Taka.</span>
-      <span>15g sachets · discovery Mix Pack · 200g bulk pouches</span>
+      <span>15g single sachets · ten-sachet discovery Mix Pack</span>
     </div>
   </div>
 </section>
@@ -979,7 +998,7 @@
     <div class="num"><div class="n" data-count="10">0</div><div class="l">Sachets in a Mix Pack</div></div>
     <div class="num"><div class="n" data-count="5">0</div><div class="l">Core fruit flavours</div></div>
     <div class="num"><div class="n" data-count="2">0</div><div class="l">Hot or iced moods</div></div>
-    <div class="num"><div class="n" data-count="35">0</div><div class="l">Taka entry price</div></div>
+    <div class="num"><div class="n" data-count="20">0</div><div class="l">Taka entry price</div></div>
   </div>
 </section>
 
@@ -990,9 +1009,9 @@
   <div class="wrap">
     <h2 class="sr">Which FruTea<br><em class="squig">are you today?</em></h2>
     <span class="burst red pop" style="--rot:-11deg;top:12vh;left:10vw"><span>Sip<br>sip!</span></span>
-    <p class="sr">Pick one fruit flavour, explore all five in the Mix Pack, or choose the lemon and honey-lemon Low Sugar Green Tea box.</p>
+    <p class="sr">Pick one fruit flavour today, explore all five in the Mix Pack, and watch for Low Sugar Green Tea after Year 1.</p>
     <a class="btn solid sr" href="#flavours">Pick your flavour</a>
-    <div class="cta-proof sr"><span>Five fruit flavours</span><span>Hot or iced</span><span>From ৳35</span></div>
+    <div class="cta-proof sr"><span>Five fruit flavours</span><span>Hot or iced</span><span>From ৳20</span></div>
   </div>
 </section>
 
@@ -1344,22 +1363,7 @@ function stickTexture(f,{iced=false}={}){
   x.fillStyle=f.ink;x.textAlign='center';x.font="700 35px 'Poppins','Arial',sans-serif";x.fillText(iced?'ICED TEA':'FRUIT TEA',256,560);x.font=swipeFont(f.name.length>7?74:102,700);x.fillText(f.name,256,690);x.font="700 27px 'Poppins','Arial',sans-serif";x.fillText('INSTANT MIX',256,748);x.font="600 20px 'Nunito Sans','Arial',sans-serif";x.fillText(iced?'SERVE OVER ICE':'SERVE HOT OR COLD',256,790);
   drawBenefitSeal(x,102,980,66,'15g','SACHET',f.ink);drawBenefitSeal(x,256,980,66,'1','CUP',f.ink);drawBenefitSeal(x,410,980,66,'30s','STIR',f.ink);
   x.save();x.translate(170,1250);x.rotate(-.2);drawSlice(x,0,0,132,f);x.restore();x.save();x.translate(340,1280);drawFruitIcon(x,f,118);x.restore();
-  x.fillStyle=f.band;x.beginPath();x.roundRect(54,1400,404,116,18);x.fill();x.fillStyle=f.ink;x.font="700 42px 'Poppins','Arial',sans-serif";x.fillText(f.name,256,1462);x.font="700 19px 'Poppins','Arial',sans-serif";x.fillText(`${iced?'20g':'15g'} · ${iced?'৳45':'৳35'}`,256,1495);
-  return packagingTex(c,f);
-}
-
-/* --- packaging: 200g bulk pouch --- */
-function pouchTexture(f){
-  const w=1024,h=1280,c=cnv(w,h),x=c.getContext('2d');
-  const g=x.createLinearGradient(0,260,0,h);g.addColorStop(0,f.base);g.addColorStop(.72,f.base);g.addColorStop(1,f.deep);x.fillStyle=g;x.fillRect(0,0,w,h);
-  x.fillStyle=f.band;x.fillRect(0,0,w,330);x.fillStyle='rgba(255,255,255,.28)';for(let y=12;y<86;y+=15)x.fillRect(0,y,w,5);
-  x.fillStyle=f.band;x.beginPath();x.moveTo(0,292);x.bezierCurveTo(230,375,535,270,1024,370);x.lineTo(1024,450);x.bezierCurveTo(590,355,280,470,0,375);x.closePath();x.fill();
-  drawBrandLogo(x,307,38,410,290);x.fillStyle=f.ink;x.textAlign='center';x.font="700 29px 'Poppins','Arial',sans-serif";x.letterSpacing='12px';x.fillText('INSTANT',512,326);x.letterSpacing='0px';
-  x.beginPath();x.arc(512,610,238,0,7);x.fillStyle='rgba(255,249,238,.96)';x.fill();x.strokeStyle=f.deep;x.lineWidth=9;x.stroke();
-  x.fillStyle=f.ink;x.textAlign='center';x.font="700 43px 'Poppins','Arial',sans-serif";x.fillText('FRUIT TEA',512,505);x.font=swipeFont(f.name.length>7?96:132,700);x.fillText(f.name,512,650);x.font="700 34px 'Poppins','Arial',sans-serif";x.fillText('INSTANT MIX',512,716);x.font="600 24px 'Nunito Sans','Arial',sans-serif";x.fillText('SERVE HOT OR COLD',512,758);
-  drawBenefitSeal(x,266,886,82,'200g','POUCH',f.ink);drawBenefitSeal(x,512,886,82,'REPEAT','SERVES',f.ink);drawBenefitSeal(x,758,886,82,'৳400','PRICE',f.ink);
-  x.save();x.translate(320,1095);x.rotate(-.22);drawSlice(x,0,0,156,f);x.restore();x.save();x.translate(704,1110);drawFruitIcon(x,f,142);x.restore();
-  x.fillStyle=f.band;x.beginPath();x.roundRect(130,1174,764,72,18);x.fill();x.fillStyle=f.ink;x.font="700 34px 'Poppins','Arial',sans-serif";x.fillText(`${f.name} · 200g BULK POUCH`,512,1222);
+  x.fillStyle=f.band;x.beginPath();x.roundRect(54,1400,404,116,18);x.fill();x.fillStyle=f.ink;x.font="700 42px 'Poppins','Arial',sans-serif";x.fillText(f.name,256,1462);x.font="700 19px 'Poppins','Arial',sans-serif";x.fillText(`${iced?'20g':'15g'} · ${iced?'৳45':'৳20'}`,256,1495);
   return packagingTex(c,f);
 }
 
@@ -1388,9 +1392,7 @@ function backTexture(f,w,h,{kind='stick'}={}){
   x.fillRect(cx-40*s,h*.22,80*s,Math.max(3,3*s));
   const steps=kind==='sachet'
     ?[['1','TEAR HERE'],['2','COLD WATER + ICE'],['3','STIR & ENJOY']]
-    :kind==='pouch'
-      ?[['1','SCOOP A SERVING'],['2','ADD HOT OR COLD WATER'],['3','STIR & SERVE']]
-      :[['1','TEAR THE STICK'],['2','ADD HOT OR COLD WATER'],['3','STIR & SERVE']];
+    :[['1','TEAR THE SACHET'],['2','ADD HOT OR COLD WATER'],['3','STIR & SERVE']];
   steps.forEach((st2,i)=>{
     const y=h*(.265+i*.065),dotX=pad+30*s;
     x.beginPath();x.arc(dotX,y-8*s,21*s,0,7);x.fillStyle=f.band;x.fill();
@@ -1407,9 +1409,7 @@ function backTexture(f,w,h,{kind='stick'}={}){
   x.fillRect(cx-panelW/2+22*s,ny+nh*.22,panelW-44*s,Math.max(2,2*s));
   const rows=kind==='sachet'
     ?[['Pack size','20g'],['Serves','1 glass'],['Serve','Cold / iced'],['Proposed price','৳45'],['Flavour',f.name]]
-    :kind==='pouch'
-      ?[['Pack size','200g'],['Serves','Bulk pouch'],['Format','Bulk pouch'],['Proposed price','৳400'],['Flavour',f.name]]
-      :[['Pack size','15g'],['Serves','1 cup'],['Format','Single sachet'],['Proposed price','৳35'],['Flavour',f.name]];
+    :[['Pack size','15g'],['Serves','1 cup'],['Format','Single sachet'],['Proposed price','৳20'],['Flavour',f.name]];
   x.font=`400 ${Math.round(17*s)}px 'Nunito Sans','Arial',sans-serif`;
   rows.forEach((r,i)=>{
     const y=ny+nh*(.39+i*.125);
@@ -1431,7 +1431,7 @@ function backTexture(f,w,h,{kind='stick'}={}){
   for(let i=0;i<44;i++){const bw=(1.4+Math.random()*4)*s;
     x.fillRect(cx-bwBox*.44+i*(bwBox*.88/44),by+bh*.15,bw*.55,bh*.55);}
   x.font=`600 ${Math.round(14*s)}px 'Poppins','Arial',sans-serif`;
-  x.fillText('8 941100 22'+(kind==='sachet'?'45':kind==='pouch'?'40':'35')+'7',cx,by+bh*.88,bwBox*.9);
+  x.fillText('8 941100 22'+(kind==='sachet'?'45':'20')+'7',cx,by+bh*.88,bwBox*.9);
   x.fillStyle='rgba(255,255,255,.86)';x.font=`400 ${Math.round(13*s)}px 'Nunito Sans','Arial',sans-serif`;
   x.fillText('FruTea Instant · proposed product concept · Bangladesh',cx,h*.975,w-pad*2);
   return tex(c);
@@ -1487,7 +1487,7 @@ function mixBoxTexture(){
   x.beginPath();x.arc(512,248,137,0,7);x.fillStyle='#FFF9EE';x.fill();x.strokeStyle='#57001E';x.lineWidth=7;x.stroke();
   drawBrandLogo(x,342,82,340,250);x.fillStyle='#57001E';x.textAlign='center';
   x.fillStyle='#FFF3D5';x.font="700 76px 'Poppins','Arial',sans-serif";x.fillText('INSTANT',512,520);x.font=swipeFont(106,700);x.fillText('FRUIT TEA',512,628);x.font="700 43px 'Poppins','Arial',sans-serif";x.fillText('MIX PACK',512,690);
-  drawBenefitSeal(x,260,784,72,'10','SACHETS','#A40A3D');drawBenefitSeal(x,512,784,72,'5','FLAVOURS','#A40A3D');drawBenefitSeal(x,764,784,72,'10','CUPS','#A40A3D');
+  drawBenefitSeal(x,260,784,72,'10','SACHETS','#A40A3D');drawBenefitSeal(x,512,784,72,'5','FLAVOURS','#A40A3D');drawBenefitSeal(x,764,784,72,'৳200','PRICE','#A40A3D');
   STICK_TEX.forEach((texture,i)=>{
     const image=texture.image,w=138,h=430,px=117+i*158,py=838+Math.abs(i-2)*12;
     x.save();x.translate(px+w/2,py+h/2);x.rotate((i-2)*.045);
@@ -1495,7 +1495,7 @@ function mixBoxTexture(){
     x.drawImage(image,-w/2,-h/2,w,h);x.restore();
   });
   x.fillStyle='#57001E';x.beginPath();x.moveTo(110,1148);x.lineTo(914,1148);x.lineTo(866,1254);x.lineTo(158,1254);x.closePath();x.fill();
-  x.fillStyle='#FFF3D5';x.font="700 35px 'Poppins','Arial',sans-serif";x.fillText('5 ASSORTED FLAVOURS',512,1215);
+  x.fillStyle='#FFF3D5';x.font="700 35px 'Poppins','Arial',sans-serif";x.fillText('5 FLAVOURS · 10 CUPS · ৳200',512,1215);
   return packagingTex(c,{base:'#FF5D63',deep:'#C71148',band:'#FFF3D5',ink:'#57001E'});
 }
 
@@ -1505,7 +1505,7 @@ function lowSugarBoxTexture({honey=false}={}){
   x.fillStyle=cream;x.beginPath();x.moveTo(0,300);x.bezierCurveTo(250,390,560,270,1024,375);x.lineTo(1024,450);x.bezierCurveTo(590,360,270,470,0,380);x.closePath();x.fill();
   drawBrandLogo(x,312,38,400,292);x.fillStyle='#124D3A';x.textAlign='center';x.font="700 28px 'Poppins','Arial',sans-serif";x.letterSpacing='11px';x.fillText('INSTANT',512,326);x.letterSpacing='0px';
   x.beginPath();x.arc(512,590,224,0,7);x.fillStyle='rgba(255,249,238,.97)';x.fill();x.strokeStyle=accent;x.lineWidth=10;x.stroke();x.fillStyle='#124D3A';x.textAlign='center';x.font="700 39px 'Poppins','Arial',sans-serif";x.fillText('LOW SUGAR',512,500);x.font=swipeFont(90,700);x.fillText('GREEN TEA',512,606);x.font="700 38px 'Poppins','Arial',sans-serif";x.fillText(honey?'HONEY-LEMON':'LEMON',512,676);
-  drawBenefitSeal(x,268,844,80,'10 × 12g','SACHETS','#124D3A');drawBenefitSeal(x,512,844,80,'10','CUPS','#124D3A');drawBenefitSeal(x,756,844,80,'৳300','PRICE','#124D3A');
+  drawBenefitSeal(x,268,844,80,'12g','SACHET','#124D3A');drawBenefitSeal(x,512,844,80,'YEAR 2','LAUNCH','#124D3A');drawBenefitSeal(x,756,844,80,'৳35','PRICE','#124D3A');
   x.save();x.translate(354,1070);x.rotate(-.2);drawSlice(x,0,0,170,F.lemon);x.restore();
   if(honey){x.beginPath();x.moveTo(690,930);x.bezierCurveTo(790,1030,790,1160,690,1220);x.bezierCurveTo(590,1160,590,1030,690,930);x.fillStyle='#F0A800';x.fill();}
   else{x.save();x.translate(704,1090);drawFruitIcon(x,F.lemon,145);x.restore();}
@@ -1521,7 +1521,7 @@ function lowSugarSachetTexture({honey=false}={}){
   x.beginPath();x.arc(256,690,198,0,7);x.fillStyle='rgba(255,249,238,.97)';x.fill();x.strokeStyle=accent;x.lineWidth=8;x.stroke();x.fillStyle='#124D3A';x.textAlign='center';x.font="700 31px 'Poppins','Arial',sans-serif";x.fillText('LOW SUGAR',256,588);x.font=swipeFont(68,700);x.fillText('GREEN TEA',256,680);x.font="700 31px 'Poppins','Arial',sans-serif";x.fillText(honey?'HONEY-LEMON':'LEMON',256,752);x.font="600 20px 'Nunito Sans','Arial',sans-serif";x.fillText('12g · ONE CUP',256,800);
   drawBenefitSeal(x,112,970,63,'LOW','SUGAR','#124D3A');drawBenefitSeal(x,256,970,63,'GREEN','TEA','#124D3A');drawBenefitSeal(x,400,970,63,'30s','STIR','#124D3A');
   x.save();x.translate(175,1270);x.rotate(-.22);drawSlice(x,0,0,130,F.lemon);x.restore();if(honey){x.beginPath();x.moveTo(350,1160);x.bezierCurveTo(430,1240,425,1360,350,1415);x.bezierCurveTo(275,1360,270,1240,350,1160);x.fillStyle='#F0A800';x.fill();}else{x.save();x.translate(355,1300);drawFruitIcon(x,F.lemon,105);x.restore();}
-  x.fillStyle=cream;x.beginPath();x.roundRect(58,1450,396,92,18);x.fill();x.fillStyle='#124D3A';x.font="700 27px 'Poppins','Arial',sans-serif";x.fillText(honey?'HONEY-LEMON · 12g':'LEMON · 12g',256,1508);
+  x.fillStyle=cream;x.beginPath();x.roundRect(58,1450,396,92,18);x.fill();x.fillStyle='#124D3A';x.font="700 27px 'Poppins','Arial',sans-serif";x.fillText(honey?'HONEY-LEMON · 12g · ৳35':'LEMON · 12g · ৳35',256,1508);
   return packagingTex(c,F.green);
 }
 
@@ -1610,8 +1610,7 @@ function applyPackFinish(pack,front){
 }
 const makeStick =(f,b)=>makePack(f,b,1.05,3.4,.30);
 const makeSachet=(f,b)=>makePack(f,b,2.35,3.15,.22);   // flat wide iced sachet (৳45)
-const makePouch =(f,b)=>makePack(f,b,2.6,3.3,.16,true);
-const makeMixPouch=(f)=>makePack(f,f,2.82,3.48,.16,true);
+const makeMixBox=(f)=>makePack(f,f,2.82,3.48,.16,true);
 
 function bumpGeo(geo,amp){ // organic surface noise
   const p=geo.attributes.position,v=new THREE.Vector3();
@@ -1900,7 +1899,6 @@ function refreshPackArt(){
     const f=FLAVOURS[i];
     STICK_TEX[i].image=stickTexture(f).image;      STICK_TEX[i].needsUpdate=true;
     SACH_TEX[i].image=sachetTexture(f).image;      SACH_TEX[i].needsUpdate=true;
-    POUCH_TEX[i].image=pouchTexture(f).image;      POUCH_TEX[i].needsUpdate=true;
     i++;
     if('requestIdleCallback' in window)requestIdleCallback(drawNext,{timeout:900});
     else setTimeout(drawNext,40);
@@ -1912,8 +1910,6 @@ const STICK_TEX =FLAVOURS.map(f=>stickTexture(f));
 const STICK_BAK =FLAVOURS.map(f=>backTexture(f,512,1600,{kind:'stick'}));
 const SACH_TEX  =FLAVOURS.map(f=>sachetTexture(f));
 const SACH_BAK  =FLAVOURS.map(f=>backTexture(f,900,1200,{kind:'sachet'}));
-const POUCH_TEX =FLAVOURS.map(f=>pouchTexture(f));
-const POUCH_BAK =FLAVOURS.map(f=>backTexture(f,1024,1280,{kind:'pouch'}));
 const MIX_BOX_TEX=mixBoxTexture();
 const MIX_SIDE_TEX=cartonSideTexture(['#FFF9EE','#FFF04D','#FF74A6'],'FRUTEA MIX PACK');
 const LOW_BOX_TEX=lowSugarBoxTexture();
@@ -1944,7 +1940,7 @@ function watchSceneCanvas(canvas){
 /* ============ ticker ============ */
 (() => {
   const items=[['Tear · pour · stir','#E8143E'],['Hot and cozy','#FF8C1A'],['Ice-cold and loud','#38A9D1'],['Five fruit moods','#FF74A6'],
-    ['Starts from ৳35','#E8143E'],['Mix all five','#1D9A67'],['Low Sugar Green Tea','#17885F'],['Instant fruit tea','#00A85A']];
+    ['Starts from ৳20','#E8143E'],['Mix all five for ৳200','#1D9A67'],['Low Sugar · Year 2','#17885F'],['Instant fruit tea','#00A85A']];
   const track=document.getElementById('ticker-track');
   track.innerHTML=items.map(([t,c],i)=>`<span${i%2?' class="big"':''}><i style="background:${c}"></i>${t} ★</span>`).join('').repeat(4);
   gsap.to(track,{xPercent:-50,ease:'none',scrollTrigger:{trigger:document.body,start:0,end:'max',scrub:.8}});
@@ -2097,7 +2093,7 @@ function watchSceneCanvas(canvas){
   const mixHalf=makeHalfFruit(F.orange,.48);mixHalf.rotation.x=.5;mixed.add(mixHalf);
   const mixBerry=makeWholeFruit(F.straw,.23);mixBerry.position.set(.72,.34,.2);mixed.add(mixBerry);
   const mixSlice=makeSliceFruit(F.lemon,.28);mixSlice.position.set(.08,-.15,.9);mixSlice.rotation.x=1.2;mixed.add(mixSlice);
-  const mixMini=makeMixPouch(MIX_BOX_TEX);mixMini.scale.setScalar(.25);mixMini.position.set(-.56,-.05,.72);mixMini.rotation.set(.02,-.28,-.12);mixed.add(mixMini);
+  const mixMini=makeMixBox(MIX_BOX_TEX);mixMini.scale.setScalar(.25);mixMini.position.set(-.56,-.05,.72);mixMini.rotation.set(.02,-.28,-.12);mixed.add(mixMini);
   const mixGlass=makeGlass(0xE43D50,{ice:7,fizz:8,style:'highball'});mixGlass.scale.setScalar(.24);mixGlass.position.set(.48,-.35,.7);mixGlass.rotation.z=-.05;mixed.add(mixGlass);
   const ice=makeIceCube(.28);ice.position.set(-.68,.4,.3);ice.rotation.set(.5,.8,0);rig.add(ice);
 
@@ -2194,7 +2190,7 @@ function watchSceneCanvas(canvas){
 })();
 
 /* ============================================================
-   FLAVOURS — pinned; per flavour: stick + bulk pouch
+   FLAVOURS — pinned; one sachet, realistic fruit and the Mix Pack
    ============================================================ */
 (() => {
   const canvas=document.getElementById('flav-canvas');
@@ -2235,14 +2231,13 @@ function watchSceneCanvas(canvas){
 
   const productGroups=FLAVOURS.map((f,i)=>{
     const group=new THREE.Group();
-    const stick=makeStick(STICK_TEX[i],STICK_BAK[i]);stick.position.set(-.86,.03,.72);stick.rotation.y=-.08;stick.scale.setScalar(.78);dressDisplayPack(stick,f);group.add(stick);
-    const pouch=makePouch(POUCH_TEX[i],POUCH_BAK[i]);pouch.position.set(1.18,.05,-.42);pouch.rotation.y=-.2;pouch.scale.setScalar(.91);dressDisplayPack(pouch,f,true);group.add(pouch);
+    const stick=makeStick(STICK_TEX[i],STICK_BAK[i]);stick.position.set(.38,.03,.5);stick.rotation.y=-.08;stick.scale.setScalar(1.02);dressDisplayPack(stick,f);group.add(stick);
     const fruit=makeFruitComposition(f);group.add(fruit);
-    group.userData={stick,pouch,fruit,index:i};rig.add(group);return group;
+    group.userData={stick,fruit,index:i};rig.add(group);return group;
   });
 
   const mixGroup=new THREE.Group();rig.add(mixGroup);
-  const mixBox=makeMixPouch(MIX_BOX_TEX);mixBox.position.set(.58,.05,-.2);mixBox.rotation.y=-.17;mixGroup.add(mixBox);
+  const mixBox=makeMixBox(MIX_BOX_TEX);mixBox.position.set(.58,.05,-.2);mixBox.rotation.y=-.17;mixGroup.add(mixBox);
   dressDisplayPack(mixBox,{deep:'#C71148',band:'#FFF3D5'},true);
   const mixFan=new THREE.Group();mixFan.position.set(-1.28,-.05,.6);mixGroup.add(mixFan);
   FLAVOURS.forEach((f,i)=>{
@@ -2270,7 +2265,7 @@ function watchSceneCanvas(canvas){
     if(i===cur)return;
     document.getElementById('flav-index').textContent=String(i+1).padStart(2,'0')+' / 06';
     ghost.textContent=labels[i];
-    stageNote.textContent=i===5?'10 × 15g assorted sachets':'15g sachet + 200g bulk pouch';
+    stageNote.textContent=i===5?'10 × 15g assorted sachets · ৳200':'15g single sachet · ৳20';
     rail.forEach((el,n)=>el.classList.toggle('active',n===i));
     section.style.setProperty('--flav-accent',tints[i]);
     section.style.setProperty('--flav-deep',deeps[i]);
@@ -2334,14 +2329,10 @@ function watchSceneCanvas(canvas){
       if(!group.visible)return;
       group.scale.setScalar(1);group.position.set(0,0,0);group.rotation.set(0,0,0);
       if(i<5){
-        const {stick,pouch,fruit}=group.userData;
-        // Original choreography: both packs spin in place together; fruit turns separately below.
-        stick.position.set(-.86,.03+Math.sin(time*.75+i)*.035,.72);
+        const {stick,fruit}=group.userData;
+        stick.position.set(.38,.03+Math.sin(time*.75+i)*.035,.5);
         stick.rotation.y=spin-.08+Math.sin(time*.48+i)*.018;
         stick.rotation.z=Math.sin(time*.48+i)*.012;
-        pouch.position.set(1.18,.05+Math.sin(time*.57+i+2)*.03,-.42);
-        pouch.rotation.y=spin-.2+Math.sin(time*.42+i)*.014;
-        pouch.rotation.z=Math.sin(time*.42+i)*.01;
         fruit.position.set(-.48,-1.27,1.15);
         fruit.rotation.y=cycle*Math.PI+time*.18+Math.sin(time*.36+i)*.09;
         fruit.rotation.z=Math.sin(time*.44+i)*.025;
@@ -2608,6 +2599,7 @@ function watchSceneCanvas(canvas){
   const cam=new THREE.PerspectiveCamera(34,1,.1,60);cam.position.set(.6,1.45,9.2);
   const lights=studioLights(scene,true);lights.key.color.set(0xF7FFD8);lights.rim.color.set(0xB9F4C9);
   const world=new THREE.Group();scene.add(world);
+  const curtain=document.querySelector('.ls-curtain');
 
   const mintGlow=glowSprite('rgba(235,255,205,.98)',.8);mintGlow.position.set(.8,.2,-2.8);mintGlow.scale.setScalar(8);world.add(mintGlow);
   const honeyGlow=glowSprite('rgba(255,226,78,.8)',.5);honeyGlow.position.set(2.6,.2,-2.4);honeyGlow.scale.setScalar(4.5);world.add(honeyGlow);
@@ -2688,6 +2680,8 @@ function watchSceneCanvas(canvas){
   (function tick(){
     if(!sceneActive()){requestAnimationFrame(tick);return;}
     const p=st.p,time=performance.now()*.001;
+    const curtainRise=THREE.MathUtils.smoothstep(p,.05,.34);
+    curtain.style.transform=`translate3d(0,${(-105*curtainRise).toFixed(2)}%,0)`;
     const orbit=p*Math.PI*1.12;
     const settle=p*p*(3-2*p);
     const handoff=THREE.MathUtils.smoothstep(p,.34,.66);
@@ -2747,7 +2741,7 @@ function watchSceneCanvas(canvas){
 })();
 
 /* ============================================================
-   CTA FINALE — the whole range fans out with sachets and 200g pouches
+   CTA FINALE — five sachets fan out around the Mix Pack
    ============================================================ */
 (() => {
   const canvas=document.getElementById('cta-canvas');
@@ -2759,12 +2753,12 @@ function watchSceneCanvas(canvas){
   studioLights(scene);
 
   const rig=new THREE.Group();scene.add(rig);rig.position.y=.18;
-  const sticks=[],pouches=[],fruits=[];
+  const sticks=[],fruits=[];
   FLAVOURS.forEach((f,i)=>{
-    const p=makePouch(POUCH_TEX[i],POUCH_BAK[i]);p.scale.setScalar(.58);rig.add(p);pouches.push(p);
     const s=makeStick(STICK_TEX[i],STICK_BAK[i]);s.scale.setScalar(.68);rig.add(s);sticks.push(s);
     const fr=makeWholeFruit(f,.26);rig.add(fr);fruits.push(fr);
   });
+  const mixBox=makeMixBox(MIX_BOX_TEX);mixBox.position.set(0,.08,-1.1);mixBox.scale.setScalar(.001);rig.add(mixBox);
   const sh=softShadow(9,.22);sh.position.y=-1.75;rig.add(sh);
 
   const st={p:0};
@@ -2783,17 +2777,12 @@ function watchSceneCanvas(canvas){
     const p=st.p,time=performance.now()*.001;
     const spread=THREE.MathUtils.clamp(p,0,1);
     const e=1-Math.pow(1-spread,3);                       // eased split
+    mixBox.position.set(0,.12+Math.sin(time*.55)*.035,-1.05);
+    mixBox.rotation.set(.025,Math.sin(time*.34)*.1,Math.sin(time*.42)*.012);
+    mixBox.scale.setScalar(.001+(.92-.001)*e);
     sticks.forEach((s,i)=>{
       const t=(i-2)/2;                                    // -1..1 across the hand
-      const pouch=pouches[i];
-      pouch.position.set(t*3.85*e, -.18 + Math.abs(t)*-.11*e + Math.sin(time*.65+i)*.03, -.42-Math.abs(t)*.26*e);
-      pouch.rotation.z=-t*.22*e;
-      pouch.rotation.y=Math.sin(time*.36+i*1.15)*.12+t*.18*e;
-      pouch.rotation.x=.035;
-      pouch.scale.setScalar(.001+(.58-.001)*e);
-      pouch.visible=e>.02;
-
-      s.position.set(t*3.68*e + t*.14, -.1 + Math.abs(t)*-.08*e + Math.sin(time*.8+i)*.04, .36-Math.abs(t)*.18*e);
+      s.position.set(t*4.35*e + t*.18, -.12 + Math.abs(t)*-.08*e + Math.sin(time*.8+i)*.04, .68-Math.abs(t)*.12*e);
       s.rotation.z=-t*.34*e;
       s.rotation.y=Math.sin(time*.42+i*1.3)*.16+t*.22*e;
       s.rotation.x=.04;
@@ -2900,14 +2889,13 @@ document.querySelectorAll('nav ul a[href^="#"]').forEach(link=>{
   };
 
   const faq=[
-    {keys:['price','cost','taka','৳'],answer:'Single 15g sachets are ৳35 each. The 10-sachet Mix Pack is ৳220, each 200g bulk pouch is ৳400, and each 10-sachet Low Sugar Green Tea box is ৳300.'},
+    {keys:['price','cost','taka','৳'],answer:'Single 15g FruTea sachets are ৳20 each, and the 10-sachet Mix Pack is ৳200. Low Sugar Green Tea is planned for Year 2 at ৳35 per sachet.'},
     {keys:['flavour','flavor','taste','options'],answer:'The five core fruit flavours are Lemon, Mango, Lychee, Orange, and Strawberry. The Mix Pack lets you explore all five.'},
     {keys:['prepare','make','how','stir','water'],answer:'Tear or open the pack, pour the powder into hot or cold water, stir, and serve immediately. Add ice when you want a colder, brighter drink.'},
     {keys:['hot','cold','iced','ice'],answer:'FruTea works hot or iced. Use hot water for a comforting tea break, or cold water and ice for a refreshing serve.'},
-    {keys:['mix pack','assorted','variety'],answer:'The FruTea Mix Pack contains 10 × 15g sachets across the five core flavours. It makes 10 cups and has a proposed price of ৳220.'},
-    {keys:['low sugar','green tea','honey','lighter'],answer:'The Low Sugar range has Lemon and Honey-Lemon Green Tea. Each box contains 10 × 12g sachets, makes 10 cups, and has a proposed price of ৳300.'},
-    {keys:['bulk','pouch','200g'],answer:'Bulk pouches are available in all five core flavours. Each pouch is 200g with a proposed price of ৳400.'},
-    {keys:['sachet','single','15g','cup'],answer:'Each core single sachet contains 15g, prepares one cup, and has a proposed price of ৳35.'},
+    {keys:['mix pack','assorted','variety'],answer:'The FruTea Mix Pack contains 10 × 15g sachets across the five core flavours. It makes 10 cups and has a proposed price of ৳200.'},
+    {keys:['low sugar','green tea','honey','lighter'],answer:'Lemon and Honey-Lemon Low Sugar Green Tea are planned for launch after FruTea completes Year 1. Each 12g sachet will make one cup at a planned price of ৳35.'},
+    {keys:['sachet','single','15g','cup'],answer:'Each core single sachet contains 15g, prepares one cup, and has a proposed price of ৳20.'},
     {keys:['buy','available','where','shop'],answer:'FruTea Instant is currently presented as a proposed product concept for Bangladesh. Retail availability has not been announced on this site.'},
     {keys:['who','student','office','family'],answer:'FruTea is designed for students, young professionals, families, offices, canteens, and online grocery shoppers in Bangladesh.'}
   ];
@@ -2927,7 +2915,7 @@ document.querySelectorAll('nav ul a[href^="#"]').forEach(link=>{
       const match=item.keys.reduce((sum,key)=>sum+(normalized.includes(key)?key.length:0),0);
       if(match>score){score=match;best=item;}
     });
-    return best?.answer||'I can help with prices, flavours, hot or iced preparation, the Mix Pack, bulk pouches, and the Low Sugar range. Try one of those topics.';
+    return best?.answer||'I can help with prices, flavours, hot or iced preparation, the Mix Pack, and the planned Low Sugar range. Try one of those topics.';
   }
 
   function ask(question){
