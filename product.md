@@ -9,12 +9,12 @@
 
 | Product Name | Flavour | Package Type | Quantity | Servings | Proposed Price |
 | ----- | ----- | ----- | ----- | ----- | ----- |
-| **FruTea Instant Lemon Tea** | Lemon | Single sachet | 15g | 1 cup | **৳20** |
-| **FruTea Instant Mango Tea** | Mango | Single sachet | 15g | 1 cup | **৳20** |
-| **FruTea Instant Lychee Tea** | Lychee | Single sachet | 15g | 1 cup | **৳20** |
-| **FruTea Instant Orange Tea** | Orange | Single sachet | 15g | 1 cup | **৳20** |
-| **FruTea Instant Strawberry Tea** | Strawberry | Single sachet | 15g | 1 cup | **৳20** |
-| **FruTea Mix Pack** | Assorted flavours | Box pack | 10 sachets x 15g | 10 cups | **৳200** |
+| **FruTea Instant Lemon Tea** | Lemon | Single sachet | 15g | 1 cup | **৳15** |
+| **FruTea Instant Mango Tea** | Mango | Single sachet | 15g | 1 cup | **৳15** |
+| **FruTea Instant Lychee Tea** | Lychee | Single sachet | 15g | 1 cup | **৳15** |
+| **FruTea Instant Orange Tea** | Orange | Single sachet | 15g | 1 cup | **৳15** |
+| **FruTea Instant Strawberry Tea** | Strawberry | Single sachet | 15g | 1 cup | **৳15** |
+| **FruTea Mix Pack** | Assorted flavours | Box pack | 10 sachets x 15g | 10 cups | **৳150** |
 | **FruTea Low Sugar Green Tea Lemon** | Lemon | Single sachet | 12g | 1 cup | **৳35** |
 | **FruTea Low Sugar Green Tea Honey-Lemon** | Honey-lemon | Single sachet | 12g | 1 cup | **৳35** |
 

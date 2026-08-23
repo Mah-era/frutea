@@ -58,9 +58,9 @@ Required visual details:
 - Cream top panel.
 - FruTea logo mark near the top.
 - Large label: `Instant Fruit Tea Mix Pack`.
-- Benefit seals: `10 sachets`, `5 flavours`, `৳200`.
+- Benefit seals: `10 sachets`, `5 flavours`, `৳150`.
 - A visible row or fan of all five sachets: Lemon, Mango, Lychee, Orange, Strawberry.
-- Bottom banner: `5 flavours · 10 cups · ৳200`.
+- Bottom banner: `5 flavours · 10 cups · ৳150`.
 
 The Mix Pack should feel like a variety discovery box, not a single-flavour pack.
 
