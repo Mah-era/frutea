@@ -23,14 +23,13 @@ button,a{font:inherit}
 .controls-hint{position:absolute;z-index:2;left:50%;bottom:18px;display:flex;gap:22px;align-items:center;transform:translateX(-50%);padding:9px 15px;border:1px solid rgba(87,0,30,.2);border-radius:6px;background:rgba(255,249,238,.88);box-shadow:0 8px 30px rgba(87,0,30,.12);backdrop-filter:blur(8px);font:700 .62rem 'Poppins',sans-serif;text-transform:uppercase;white-space:nowrap;transition:opacity .35s,transform .35s}
 .controls-hint.hidden{opacity:0;transform:translate(-50%,12px);pointer-events:none}
 kbd{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-right:3px;border:1px solid rgba(87,0,30,.3);border-bottom-width:3px;border-radius:4px;background:#fff;font:700 .65rem 'Poppins',sans-serif}
-.lifeline-button{background:var(--yellow)}
 .touch-pad{position:absolute;z-index:3;inset:auto 24px 24px;display:none;grid-template-columns:64px 64px 1fr 1fr 1fr;gap:10px;pointer-events:none}
 .touch-button{height:58px;border:2px solid var(--wine);border-radius:8px;background:rgba(255,249,238,.9);color:var(--wine);box-shadow:4px 5px 0 rgba(87,0,30,.22);font:700 .85rem 'Poppins',sans-serif;text-transform:uppercase;pointer-events:auto;touch-action:none;user-select:none}
 .touch-button:active,.touch-button.is-down{transform:translate(2px,2px);box-shadow:2px 3px 0 rgba(87,0,30,.24);background:var(--yellow)}
-.touch-button.jump,.touch-button.attack,.touch-button.life{justify-self:stretch;width:auto;color:#fff}
+.touch-button.jump,.touch-button.attack,.touch-button.dash{justify-self:stretch;width:auto;color:#fff}
 .touch-button.jump{background:var(--red)}
 .touch-button.attack{background:var(--wine)}
-.touch-button.life{background:var(--yellow);color:var(--wine)}
+.touch-button.dash{background:var(--yellow);color:var(--wine)}
 .force-touch .touch-pad{display:grid}
 @keyframes pulse{50%{transform:scale(.72);opacity:.65}}
 @media (pointer:coarse),(max-width:860px){
