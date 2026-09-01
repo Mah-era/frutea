@@ -3,41 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FruTea Fruit Rush</title>
-  <meta name="description" content="Run, jump and collect a full-fruit tea break in FruTea Fruit Rush.">
+  <title>Opening FruTea Jungle Quest V2</title>
+  <meta name="description" content="Open the latest FruTea game.">
   <link rel="icon" type="image/png" href="../assets/Logo/versions/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="game.css?v=66">
+  <style>
+    html,body{height:100%;margin:0}body{display:grid;place-items:center;background:#103f3b;color:#fff8e8;font:700 16px system-ui,sans-serif}a{color:#ffe64d}
+  </style>
+  <script>
+    location.replace(`V2/index.html${location.search}${location.hash}`);
+  </script>
 </head>
 <body>
-  <main class="game-shell">
-    <header class="game-bar">
-      <a class="wordmark" href="../index.html" aria-label="Back to FruTea"><img src="../assets/Logo/versions/horizontal-logo.png" alt="FruTea Instant"></a>
-      <div class="mission"><span class="live-dot"></span> Mission: rescue the tea break</div>
-      <div class="bar-actions">
-        <button id="sound-button" class="icon-button" type="button" title="Music and sound on" aria-label="Toggle music and sound" aria-pressed="true">♪</button>
-        <button id="pause-button" class="icon-button" type="button" title="Pause game" aria-label="Pause game">Ⅱ</button>
-        <a class="exit-link" href="../index.html">Exit game</a>
-      </div>
-    </header>
-    <section class="stage-wrap" aria-label="FruTea Fruit Rush game">
-      <div id="game"></div>
-      <button id="start-game-trigger" class="start-game-trigger" type="button" aria-label="Start the expedition" hidden>Start the expedition</button>
-      <div class="controls-hint" aria-hidden="true">
-        <span><kbd>A</kbd><kbd>D</kbd> move</span><span><kbd>W</kbd> or <kbd>Space</kbd> jump</span><span><kbd>F</kbd> throw</span><span><kbd>Shift</kbd> dash</span>
-      </div>
-      <div class="touch-pad" aria-label="Touch controls">
-        <button class="touch-button" type="button" data-control="left" aria-label="Move left">A</button>
-        <button class="touch-button" type="button" data-control="right" aria-label="Move right">D</button>
-        <button class="touch-button attack" type="button" data-control="attack" aria-label="Throw fruit">Hit</button>
-        <button class="touch-button jump" type="button" data-control="jump" aria-label="Jump">Jump</button>
-        <button class="touch-button dash" type="button" data-control="dash" aria-label="Dash">Dash</button>
-      </div>
-    </section>
-  </main>
-  <script src="vendor/phaser-3.90.0.min.js"></script>
-  <script src="assets.generated.js?v=66"></script>
-  <script src="game-expedition.js?v=66"></script>
+  <p>Opening <a href="V2/index.html">FruTea Jungle Quest V2</a>...</p>
 </body>
 </html>

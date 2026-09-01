@@ -1,0 +1,23 @@
+:root{--cream:#fff8e8;--wine:#57001e;--red:#e8143e;--yellow:#ffe64d;--mint:#5ee2a0;--forest:#103f3b;--ink:#240510}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#082f2d}
+body{font-family:'Nunito Sans',sans-serif;color:var(--wine)}
+button,a{font:inherit}
+.game-shell{height:100%;display:grid;grid-template-rows:64px minmax(0,1fr);background:#082f2d}
+.game-bar{z-index:5;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;border-bottom:3px solid var(--wine);background:var(--cream);box-shadow:0 8px 24px rgba(20,3,10,.24)}
+.wordmark{display:flex;align-items:center;width:max-content}.wordmark img{display:block;width:148px;max-height:46px;object-fit:contain}
+.mission{display:flex;align-items:center;gap:9px;color:var(--wine);font:700 .7rem 'Poppins',sans-serif;text-transform:uppercase}.mission b{padding:3px 7px;border:2px solid var(--wine);border-radius:5px;background:var(--yellow)}
+.live-dot{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(232,20,62,.13);animation:pulse 1.5s ease-in-out infinite}
+.bar-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px}.icon-button,.version-link{display:grid;place-items:center;width:38px;height:38px;border:2px solid var(--wine);border-radius:6px;background:#fff;color:var(--wine);font:700 .78rem 'Poppins',sans-serif;text-decoration:none;cursor:pointer}.icon-button:hover,.version-link:hover{background:var(--yellow);transform:translateY(-1px)}
+.exit-link{padding:10px 15px;border:2px solid var(--wine);border-radius:6px;background:var(--wine);color:#fff;text-decoration:none;font:700 .68rem 'Poppins',sans-serif;text-transform:uppercase}
+.stage-wrap{position:relative;min-height:0;overflow:hidden;background:#0c4f48}
+#game{display:flex;width:100%;height:100%;align-items:center;justify-content:center}#game canvas{display:block;max-width:100%;max-height:100%;margin:0!important}
+.action-trigger{position:absolute;z-index:8;margin:0;border:4px solid var(--wine);border-radius:7px;background:var(--red);color:#fff;box-shadow:0 7px 0 rgba(49,1,18,.28);font:700 1rem 'Poppins',sans-serif;text-transform:uppercase;cursor:pointer;transition:transform .16s,background .16s}.action-trigger:hover{background:#ff4d65;transform:translateY(-2px)}.action-trigger[hidden]{display:none}
+.controls-hint{position:absolute;z-index:3;left:50%;bottom:16px;display:flex;gap:18px;align-items:center;transform:translateX(-50%);padding:8px 14px;border:2px solid rgba(87,0,30,.4);border-radius:6px;background:rgba(255,248,232,.92);box-shadow:0 7px 22px rgba(18,4,8,.2);font:700 .6rem 'Poppins',sans-serif;text-transform:uppercase;white-space:nowrap;transition:.3s}.controls-hint.hidden{opacity:0;transform:translate(-50%,10px);pointer-events:none}
+kbd{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-right:3px;border:1px solid var(--wine);border-bottom-width:3px;border-radius:4px;background:#fff;font:700 .63rem 'Poppins',sans-serif}
+.touch-pad{position:absolute;z-index:6;inset:auto 18px 18px;display:none;justify-content:space-between;pointer-events:none}.touch-move,.touch-actions{display:flex;align-items:flex-end;gap:8px}.touch-button{min-width:58px;height:56px;padding:0 12px;border:2px solid var(--wine);border-radius:8px;background:rgba(255,248,232,.94);color:var(--wine);box-shadow:3px 4px 0 rgba(35,3,15,.28);font:700 .78rem 'Poppins',sans-serif;text-transform:uppercase;pointer-events:auto;touch-action:none;user-select:none}.touch-button:active,.touch-button.is-down{transform:translate(2px,2px);box-shadow:1px 2px 0 rgba(35,3,15,.28)}.touch-button.attack{background:var(--wine);color:#fff}.touch-button.jump{background:var(--red);color:#fff}.touch-button.dash{background:var(--yellow)}.touch-button.climb{background:var(--mint);font-size:1.2rem}
+.force-touch .touch-pad{display:flex}.force-touch .controls-hint{display:none}
+@keyframes pulse{50%{transform:scale(.7);opacity:.62}}
+@media (pointer:coarse),(max-width:900px){.game-shell{grid-template-rows:58px minmax(0,1fr)}.game-bar{grid-template-columns:auto 1fr auto;padding:0 10px;gap:8px}.wordmark img{width:112px}.mission{justify-content:center;font-size:.56rem}.bar-actions{gap:5px}.icon-button,.version-link{width:34px;height:34px}.exit-link{display:none}.touch-pad{display:flex}.controls-hint{display:none}}
+@media (orientation:portrait) and (max-width:700px){#game canvas{width:125%!important;max-width:none;height:auto!important}}
+@media (max-width:560px){.mission span:not(.live-dot){display:none}.wordmark img{width:96px}.touch-button{min-width:50px;height:50px;padding:0 8px;font-size:.67rem}}
