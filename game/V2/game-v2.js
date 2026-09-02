@@ -19,52 +19,52 @@
     pink: 0xf65aa0, orange: 0xff8a24, blue: 0x65d7e7, purple: 0x9c4dcc
   };
   const LEVELS = [
-    { key: 'lemon', name: 'LEMON CANOPY', zone: 'SUNBEAM HEIGHTS', color: 0xffe64d, grass: 0x78cf45, grassHi: 0xc9f36a, dirt: 0x9b5525, rock: 0x684021, fog: 0x9ff2c6, sky: 0x63d4b0, accent: 0xfff6a0, boss: 'SOUR SNAPDRAGON', hp: 6, hazard: 'CITRUS SAP' },
-    { key: 'mango', name: 'MANGO RUINS', zone: 'GOLDEN TEMPLE', color: 0xff9a24, grass: 0x58b94b, grassHi: 0xb9dc52, dirt: 0xad5c27, rock: 0x6b3920, fog: 0xffc466, sky: 0x2a8f70, accent: 0xffc93d, boss: 'MANGO MAULER', hp: 7, hazard: 'TEMPLE TRAPS' },
-    { key: 'lychee', name: 'LYCHEE LAGOON', zone: 'BUBBLE MARSH', color: 0xf65aa0, grass: 0x67d09a, grassHi: 0xb7f2cd, dirt: 0x744b88, rock: 0x463658, fog: 0xf9b8d9, sky: 0x477e91, accent: 0xffd7ec, boss: 'BUBBLE BEAST', hp: 8, hazard: 'DEEP WATER' },
-    { key: 'orange', name: 'ORANGE CRATER', zone: 'EMBER JUNGLE', color: 0xff6c21, grass: 0x93b83f, grassHi: 0xd8dc58, dirt: 0x8c3d25, rock: 0x3b2928, fog: 0xff9254, sky: 0x70333f, accent: 0xffb52e, boss: 'PEEL VOLCANO', hp: 9, hazard: 'MOLTEN PEEL' },
-    { key: 'strawberry', name: 'STRAWBERRY WILDS', zone: 'BERRY MOON', color: 0xe8143e, grass: 0x2cb76d, grassHi: 0x7de19c, dirt: 0x6e314e, rock: 0x3a213d, fog: 0xff6f9d, sky: 0x3d2859, accent: 0xffb8cf, boss: 'JAM TITAN', hp: 12, hazard: 'THORN JAM' }
+    { key: 'lemon', name: 'LEMON CANOPY', zone: 'SUNBEAM HEIGHTS', color: 0xffe64d, grass: 0x78cf45, grassHi: 0xc9f36a, dirt: 0x9b5525, rock: 0x684021, fog: 0x9ff2c6, sky: 0x63d4b0, accent: 0xfff6a0, boss: 'SOUR SNAPDRAGON', hp: 5, hazard: 'CITRUS SAP' },
+    { key: 'mango', name: 'MANGO RUINS', zone: 'GOLDEN TEMPLE', color: 0xff9a24, grass: 0x58b94b, grassHi: 0xb9dc52, dirt: 0xad5c27, rock: 0x6b3920, fog: 0xffc466, sky: 0x2a8f70, accent: 0xffc93d, boss: 'MANGO MAULER', hp: 6, hazard: 'TEMPLE TRAPS' },
+    { key: 'lychee', name: 'LYCHEE LAGOON', zone: 'BUBBLE MARSH', color: 0xf65aa0, grass: 0x67d09a, grassHi: 0xb7f2cd, dirt: 0x744b88, rock: 0x463658, fog: 0xf9b8d9, sky: 0x477e91, accent: 0xffd7ec, boss: 'BUBBLE BEAST', hp: 7, hazard: 'DEEP WATER' },
+    { key: 'orange', name: 'ORANGE CRATER', zone: 'EMBER JUNGLE', color: 0xff6c21, grass: 0x93b83f, grassHi: 0xd8dc58, dirt: 0x8c3d25, rock: 0x3b2928, fog: 0xff9254, sky: 0x70333f, accent: 0xffb52e, boss: 'PEEL VOLCANO', hp: 8, hazard: 'MOLTEN PEEL' },
+    { key: 'strawberry', name: 'STRAWBERRY WILDS', zone: 'BERRY MOON', color: 0xe8143e, grass: 0x2cb76d, grassHi: 0x7de19c, dirt: 0x6e314e, rock: 0x3a213d, fog: 0xff6f9d, sky: 0x3d2859, accent: 0xffb8cf, boss: 'JAM TITAN', hp: 10, hazard: 'THORN JAM' }
   ];
   const WORLD_LAYOUTS = [
     {
-      ground: [[0, 1900], [2260, 1800], [4380, 2050], [6830, 3170]],
-      platforms: [[780, 610, 500], [1450, 420, 440], [2020, 575, 360], [2860, 430, 540], [3630, 610, 470], [4320, 355, 470], [5140, 545, 560], [5920, 320, 430], [6600, 590, 500], [7420, 410, 470], [8200, 565, 550], [8910, 335, 470]],
+      ground: [[0, 2050], [2260, 1960], [4380, 2250], [6830, 3170]],
+      platforms: [[780, 360, 500], [1450, 420, 440], [2020, 575, 360], [2860, 430, 540], [3630, 610, 470], [4320, 355, 470], [5140, 545, 560], [5920, 320, 430], [6600, 590, 500], [7420, 410, 470], [8200, 565, 550], [8910, 335, 470]],
       ladders: [[1450, 420], [2860, 430], [4320, 355], [5920, 320], [7420, 410], [8910, 335]],
       movers: [[3300, 520], [6260, 400], [7860, 500]],
       crates: [[1080, 740], [2020, 515], [3890, 740], [5140, 485], [6870, 740], [8200, 505]],
-      spikes: [1880, 4070, 6410, 8400]
+      spikes: [2800, 4070, 6410, 8400]
     },
     {
-      ground: [[0, 1550], [1840, 1200], [3330, 1600], [5260, 1160], [6750, 3250]],
-      platforms: [[670, 570, 430], [1280, 365, 360], [2110, 630, 400], [2700, 430, 440], [3510, 585, 380], [4100, 365, 520], [4920, 535, 370], [5630, 330, 430], [6240, 570, 380], [7040, 470, 500], [7820, 300, 430], [8550, 500, 520]],
+      ground: [[0, 1630], [1840, 1280], [3330, 1700], [5260, 1260], [6750, 3250]],
+      platforms: [[670, 340, 430], [1280, 365, 360], [2110, 630, 400], [2700, 430, 440], [3510, 585, 380], [4100, 365, 520], [4920, 535, 370], [5630, 330, 430], [6240, 570, 380], [7040, 470, 500], [7820, 300, 430], [8550, 500, 520]],
       ladders: [[1280, 365], [2700, 430], [4100, 365], [5630, 330], [7040, 470], [7820, 300]],
       movers: [[1640, 500], [3150, 350], [6530, 390]],
       crates: [[900, 740], [2110, 570], [3680, 520], [4920, 475], [7040, 410], [8550, 440]],
-      spikes: [1490, 3080, 4920, 6450, 8180]
+      spikes: [2400, 3080, 4920, 6450, 8180]
     },
     {
-      ground: [[0, 2050], [2460, 1450], [4240, 1270], [5800, 1740], [7850, 2150]],
-      platforms: [[820, 575, 470], [1540, 350, 420], [2240, 570, 330], [2920, 420, 500], [3800, 620, 360], [4510, 410, 430], [5260, 260, 390], [5980, 540, 470], [6740, 335, 420], [7490, 580, 360], [8210, 390, 500], [8950, 250, 430]],
+      ground: [[0, 2250], [2460, 1570], [4240, 1370], [5800, 1860], [7850, 2150]],
+      platforms: [[820, 370, 470], [1540, 350, 420], [2240, 570, 330], [2920, 420, 500], [3800, 620, 360], [4510, 410, 430], [5260, 260, 390], [5980, 540, 470], [6740, 335, 420], [7490, 580, 360], [8210, 390, 500], [8950, 250, 430]],
       ladders: [[1540, 350], [2920, 420], [4510, 410], [5260, 260], [6740, 335], [8950, 250]],
       movers: [[2270, 350], [4050, 300], [7700, 350]],
       crates: [[1180, 740], [2920, 360], [4660, 350], [5980, 480], [8210, 330], [9070, 710]],
-      spikes: [1980, 4050, 5580, 7700]
+      spikes: [2900, 4050, 5580, 7700]
     },
     {
-      ground: [[0, 1720], [2130, 1370], [3850, 1000], [5160, 1470], [7000, 3000]],
-      platforms: [[720, 600, 450], [1370, 410, 430], [1970, 610, 320], [2580, 360, 460], [3310, 540, 350], [3960, 310, 410], [4700, 610, 360], [5400, 420, 470], [6160, 250, 400], [6840, 580, 340], [7580, 390, 450], [8380, 540, 520]],
+      ground: [[0, 1920], [2130, 1510], [3850, 1100], [5160, 1740], [7000, 3000]],
+      platforms: [[720, 360, 450], [1370, 410, 430], [1970, 610, 320], [2580, 360, 460], [3310, 540, 350], [3960, 310, 410], [4700, 610, 360], [5400, 420, 470], [6160, 250, 400], [6840, 580, 340], [7580, 390, 450], [8380, 540, 520]],
       ladders: [[1370, 410], [2580, 360], [3960, 310], [5400, 420], [6160, 250], [7580, 390]],
       movers: [[1830, 380], [3650, 470], [6650, 350]],
       crates: [[980, 740], [2580, 300], [4200, 740], [5400, 360], [7580, 330], [8380, 480]],
-      spikes: [1690, 3520, 4860, 6710, 8530]
+      spikes: [2700, 3520, 4860, 6710, 8530]
     },
     {
-      ground: [[0, 1320], [1650, 1080], [3090, 1190], [4640, 1200], [6250, 1100], [7700, 2300]],
-      platforms: [[590, 570, 360], [1180, 330, 390], [1810, 610, 340], [2410, 380, 410], [3150, 570, 330], [3730, 300, 420], [4460, 500, 350], [5070, 265, 390], [5720, 580, 340], [6350, 350, 400], [7040, 540, 330], [7650, 280, 420], [8380, 500, 500]],
+      ground: [[0, 1430], [1650, 1240], [3090, 1340], [4640, 1450], [6250, 1300], [7700, 2300]],
+      platforms: [[590, 350, 360], [1180, 330, 390], [1810, 610, 340], [2410, 380, 410], [3150, 570, 330], [3730, 300, 420], [4460, 500, 350], [5070, 265, 390], [5720, 580, 340], [6350, 350, 400], [7040, 540, 330], [7650, 280, 420], [8380, 500, 500]],
       ladders: [[1180, 330], [2410, 380], [3730, 300], [5070, 265], [6350, 350], [7650, 280]],
       movers: [[1450, 490], [2860, 320], [6020, 300], [7350, 390]],
       crates: [[780, 740], [2410, 320], [3920, 740], [5070, 205], [6500, 740], [8380, 440]],
-      spikes: [1300, 2890, 4390, 5950, 7410, 8810]
+      spikes: [2200, 2890, 4390, 5950, 7410, 8810]
     }
   ];
   const SCORE_KEY = 'frutea-jungle-quest-v2-best';
@@ -226,8 +226,11 @@
       this.makeCollectibles(level, index);
       this.makeEnemies(level, index);
       this.makeBoss(level, index);
+      this.bossShotCollider = null;
+      this.bossPlayerCollider = null;
+      this.solidsCollider = this.physics.add.collider(this.player, this.solids);
       this.levelColliders = [
-        this.physics.add.collider(this.player, this.solids),
+        this.solidsCollider,
         this.physics.add.collider(this.player, this.movers),
         this.physics.add.overlap(this.player, this.fruits, this.collectFruit, null, this),
         this.physics.add.overlap(this.player, this.keysGroup, this.collectKey, null, this),
@@ -236,21 +239,20 @@
         this.physics.add.overlap(this.player, this.enemies, this.touchEnemy, null, this),
         this.physics.add.overlap(this.shots, this.enemies, this.hitEnemy, null, this),
         this.physics.add.overlap(this.player, this.spikes, (_p, spike) => this.damage(spike.x), null, this),
-        this.physics.add.overlap(this.player, this.bossShots, (_p, shot) => { shot.destroy(); this.damage(shot.x); }, null, this),
-        this.physics.add.overlap(this.shots, this.boss, this.hitBoss, null, this),
-        this.physics.add.collider(this.player, this.boss, () => this.damage(this.boss.x), null, this)
+        this.physics.add.overlap(this.player, this.bossShots, (_p, shot) => { shot.destroy(); this.damage(shot.x); }, null, this)
       ];
       S.fruit = 0; S.keys = 0; S.gems = 0; S.chests = 0; S.combo = 1; S.comboUntil = 0;
       S.lives = index === 0 ? MAX_LIVES : Math.min(MAX_LIVES, S.lives + 1);
-      this.checkpointX = QA && params.has('arena') ? WORLD_W - 1650 : 180;
-      this.nextDashAt = 0; this.dashingUntil = 0; this.nextFireAt = 0; this.nextBossAttack = this.time.now + 1800;
+      this.checkpointX = QA && params.has('arena') ? WORLD_W - 1250 : 180;
+      this.nextDashAt = 0; this.dashingUntil = 0; this.nextFireAt = 0; this.jumpQueuedUntil = 0; this.nextBossAttack = this.time.now + 1800; this.nextQaStateAt = 0;
       this.cameras.main.setBounds(0, 0, WORLD_W, H).startFollow(this.player, true, .09, .09, -225, 0).setDeadzone(400, 210);
       this.physics.world.setBounds(0, 0, WORLD_W, H);
       this.updateHud();
     }
 
     clearLevel() {
-      this.levelColliders?.forEach(collider => collider.destroy());
+      this.levelColliders?.forEach(collider => { if (collider?.world) collider.destroy(); });
+      this.levelColliders = [];
       ['solids', 'movers', 'fruits', 'keysGroup', 'gems', 'chests', 'enemies', 'spikes', 'shots', 'bossShots'].forEach(name => this[name]?.clear(true, true));
       this.player?.destroy(); this.boss?.destroy(); this.portal?.destroy(); this.worldLayer?.destroy(true); this.themeBackdrop?.destroy(true);
       this.gateBody = null; this.bossLabel = null;
@@ -340,7 +342,9 @@
       visual.lineStyle(7, index === 2 ? level.accent : index === 4 ? level.color : C.coral);
       for (let y = top + 15; y < bottom; y += 42) visual.lineBetween(x - 29, y, x + 29, y);
       this.worldLayer.add(visual);
-      this.ladders.push(new Phaser.Geom.Rectangle(x - 48, top - 24, 96, bottom - top + 55));
+      const zone = new Phaser.Geom.Rectangle(x - 48, top - 170, 96, bottom - top + 201);
+      zone.exitY = top - 147;
+      this.ladders.push(zone);
     }
 
     addMovingPlatform(x, y, level, index) {
@@ -400,10 +404,24 @@
     }
 
     makePlayer() {
-      const startX = QA && params.has('arena') ? WORLD_W - 1650 : 180;
+      const startX = QA && params.has('arena') ? WORLD_W - 1250 : 180;
       this.player = this.physics.add.sprite(startX, 675, 'mascot-main-mascot-clean').setDisplaySize(154, 154).setDepth(20);
-      this.player.body.setSize(this.player.width * .5, this.player.height * .66).setOffset(this.player.width * .25, this.player.height * .3).setCollideWorldBounds(true).setMaxVelocity(QA ? 690 : 440, 1050).setDragX(1250);
+      this.syncPlayerBody();
+      this.player.body.setCollideWorldBounds(true).setMaxVelocity(QA ? 690 : 440, 1050).setDragX(1250);
       this.playerState = 'ground'; this.invulnerable = false; this.climbing = false; this.lastGroundedAt = 0;
+    }
+
+    syncPlayerBody() {
+      const scaleX = Math.abs(this.player.scaleX) || 1, scaleY = Math.abs(this.player.scaleY) || 1;
+      const bodyWidth = 72 / scaleX, bodyHeight = 100 / scaleY;
+      this.player.body.setSize(bodyWidth, bodyHeight, false).setOffset((this.player.width - bodyWidth) / 2, this.player.height - bodyHeight - 8 / scaleY);
+    }
+
+    setPlayerTexture(name) {
+      const key = `mascot-${name}`;
+      if (this.player.texture.key === key) return;
+      this.player.setTexture(key).setDisplaySize(154, 154);
+      this.syncPlayerBody();
     }
 
     makeCollectibles(level, index) {
@@ -424,7 +442,7 @@
       [layout.platforms[2], layout.platforms[7], layout.platforms[10]].forEach((spot, i) => {
         const pos = [spot[0], spot[1] - 62];
         const chest = this.chests.create(pos[0] * scale, pos[1], 'chest-closed').setDisplaySize(98, 92).setDepth(11);
-        chest.body.setSize(88, 70).setOffset(5, 20); chest.setData({ opened: false, id: i });
+        chest.body.setSize(96, 92).setOffset(1, 0); chest.setData({ opened: false, id: i });
       });
       for (let i = 0; i < (QA ? 6 : 18); i++) {
         const spot = spots[(i * 2 + index) % spots.length], x = spot[0] * scale + (i % 2 ? 65 : -65), y = spot[1] - 18;
@@ -447,7 +465,9 @@
       ][index];
       for (let i = 0; i < count; i++) {
         const source = i % 3 === 0 ? platformSpots[i % platformSpots.length] : [groundSpots[i % groundSpots.length], 710];
-        const x = source[0] * (WORLD_W / 10000), baseY = source[1];
+        const scale = WORLD_W / 10000, baseY = source[1];
+        let x = source[0] * scale;
+        if (baseY === 710 && x < 2600 * scale) x = (2600 + i * 500) * scale;
         const enemy = this.enemies.create(x, baseY, `enemy-${index}`).setDisplaySize(82 + index * 2, 82 + index * 2).setDepth(14);
         enemy.body.setCircle(31, 17, 17);
         enemy.setData({ baseX: x, baseY, phase: i * .8, range: 80 + (i % 4) * 35, speed: .0012 + index * .00012, type: species[i % species.length], hp: index > 2 && i % 4 === 0 ? 2 : 1 });
@@ -479,6 +499,9 @@
       if (!this.boss?.active || this.boss.getData('revealed')) return;
       const level = LEVELS[S.level];
       this.boss.setData('revealed', true); this.boss.body.enable = true; this.bossLabel.setAlpha(0);
+      this.bossShotCollider = this.physics.add.overlap(this.shots, this.boss, this.hitBoss, null, this);
+      this.bossPlayerCollider = this.physics.add.collider(this.player, this.boss, () => this.damage(this.boss.x), null, this);
+      this.levelColliders.push(this.bossShotCollider, this.bossPlayerCollider);
       this.sfx('warning'); this.cameras.main.shake(260, .012);
       this.tweens.add({ targets: this.boss, alpha: 1, angle: 0, duration: 620, ease: 'Back.easeOut' });
       this.tweens.add({ targets: this.bossLabel, alpha: 1, duration: 420, delay: 260 });
@@ -592,10 +615,18 @@
     }
 
     jump() {
+      if (QA) this.qaJumpRequests = (this.qaJumpRequests || 0) + 1;
       if (!S.started || S.paused || S.finished || this.playerState === 'hurt') return;
+      this.jumpQueuedUntil = this.time.now + 180;
+    }
+
+    performJump(grounded) {
       if (this.climbing) { this.climbing = false; this.player.body.allowGravity = true; this.player.setVelocityY(-620); return; }
-      const grounded = this.player.body.blocked.down || this.player.body.touching.down;
-      if (grounded || this.time.now - this.lastGroundedAt < 150) { this.player.setVelocityY(-760); this.playerState = 'air'; this.sfx('jump'); this.mood('energetic', 280); }
+      if (grounded || this.playerState === 'ground' || this.time.now - this.lastGroundedAt < 180) {
+        this.player.setVelocityY(-760); this.playerState = 'air'; this.jumpQueuedUntil = 0;
+        if (QA) this.qaLastJump = { grounded, at: Math.round(this.time.now), velocity: Math.round(this.player.body.velocity.y) };
+        this.sfx('jump'); this.mood('energetic', 280);
+      }
     }
 
     dash() {
@@ -642,16 +673,20 @@
 
     bossAttack(time) {
       if (!this.boss?.active || !this.boss.getData('alive') || !this.boss.getData('revealed') || !this.boss.getData('awake') || this.player.x < WORLD_W - 1800 || time < this.nextBossAttack) return;
-      const level = LEVELS[S.level], count = 2 + Math.min(3, S.level); this.nextBossAttack = time + 2050 - S.level * 150; this.sfx('warning'); this.boss.setTint(C.coral); this.time.delayedCall(130, () => this.boss?.active && this.boss.clearTint());
-      for (let i = 0; i < count; i++) {
+      const level = LEVELS[S.level], count = 2 + Math.min(3, S.level); this.nextBossAttack = time + 2400 - S.level * 120; this.sfx('warning'); this.boss.setTint(C.coral); this.time.delayedCall(450, () => this.boss?.active && this.boss.clearTint());
+      this.time.delayedCall(480, () => {
+        if (!this.boss?.active || !this.boss.getData('alive') || !this.boss.getData('awake')) return;
+        const volleyTime = this.time.now;
+        for (let i = 0; i < count; i++) {
         let x = this.boss.x - 90, y = 680 - i * 115, vx = -350 - S.level * 55, vy = (i - count / 2) * 55, type = 'wave', size = 44;
         if (S.level === 1 && i % 2 === 0) { x = Phaser.Math.Clamp(this.player.x + Phaser.Math.Between(-320, 320), WORLD_W - 1650, WORLD_W - 180); y = 180 - i * 45; vx = 0; vy = 430; type = 'rain'; size = 58; }
         if (S.level === 2) { vx = -275; vy = 0; type = 'bubble'; size = 62 - i * 4; }
         if (S.level === 3) { vx = -520 - i * 35; vy = -170 + i * 85; type = 'ember'; size = 50; }
         if (S.level === 4 && i % 2 === 0) { x = Phaser.Math.Clamp(this.player.x + Phaser.Math.Between(-420, 420), WORLD_W - 1700, WORLD_W - 180); y = 120 - i * 20; vx = Phaser.Math.Between(-80, 80); vy = 540; type = 'thorn'; size = 64; }
         const shot = this.bossShots.create(x, y, `hazard-${S.level}`).setDisplaySize(size + 14, size).setVelocity(vx, vy).setDepth(19);
-        shot.body.setCircle(Math.max(14, size * .36), 5, 5); shot.setData({ born: time, baseY: y, phase: i, type });
-      }
+        shot.body.setCircle(Math.max(14, size * .36), 5, 5); shot.setData({ born: volleyTime, baseY: y, phase: i, type });
+        }
+      });
     }
 
     raiseCombo(amount = 1) { S.combo = Math.min(9, S.combo + amount); S.comboUntil = this.time.now + 4000; }
@@ -673,13 +708,26 @@
 
     loadBest() { try { return Math.max(0, parseInt(localStorage.getItem(SCORE_KEY) || '0', 10) || 0); } catch { return 0; } }
 
+    publishQaState(time) {
+      if (!QA || time < this.nextQaStateAt) return;
+      this.nextQaStateAt = time + 120;
+      document.body.dataset.qaState = JSON.stringify({
+        level: S.level + 1, score: S.score, lives: S.lives, fruit: S.fruit, keys: S.keys, gems: S.gems, chests: S.chests,
+        player: { x: Math.round(this.player.x), y: Math.round(this.player.y), vx: Math.round(this.player.body.velocity.x), vy: Math.round(this.player.body.velocity.y), facing: this.player.flipX ? 'left' : 'right', state: this.playerState, invulnerable: this.invulnerable },
+        boss: { x: Math.round(this.boss.x), y: Math.round(this.boss.y), hp: this.boss.getData('hp'), revealed: this.boss.getData('revealed'), awake: this.boss.getData('awake'), alive: this.boss.getData('alive'), bodyEnabled: this.boss.body.enable },
+        active: { fruit: this.fruits.countActive(true), keys: this.keysGroup.countActive(true), chests: this.chests.countActive(true), enemies: this.enemies.countActive(true), shots: this.shots.countActive(true), bossShots: this.bossShots.countActive(true) },
+        projectiles: this.shots.getChildren().filter(shot => shot.active).slice(0, 3).map(shot => ({ x: Math.round(shot.x), y: Math.round(shot.y), vx: Math.round(shot.body.velocity.x) })),
+        input: { jumpRequests: this.qaJumpRequests || 0, lastJump: this.qaLastJump || null }
+      });
+    }
+
     banner(message, color) {
       const text = this.add.text(W / 2, 175, message, { ...this.font('Fredoka', 34, '#57001e'), backgroundColor: Phaser.Display.Color.IntegerToColor(color).rgba, padding: { x: 18, y: 9 } }).setOrigin(.5).setScrollFactor(0).setDepth(90).setAlpha(0).setScale(.82);
       this.tweens.add({ targets: text, alpha: 1, scale: 1, duration: 190, ease: 'Back.easeOut', hold: 820, yoyo: true, onComplete: () => text.destroy() });
     }
 
     burst(x, y, color, count) { for (let i = 0; i < count; i++) { const dot = this.add.circle(x, y, Phaser.Math.Between(4, 9), color).setDepth(30), angle = Phaser.Math.FloatBetween(0, Math.PI * 2), distance = Phaser.Math.Between(45, 120); this.tweens.add({ targets: dot, x: x + Math.cos(angle) * distance, y: y + Math.sin(angle) * distance, alpha: 0, scale: .1, duration: 440, onComplete: () => dot.destroy() }); } }
-    mood(name, duration = 0) { this.player.setTexture(`mascot-${name}`).setDisplaySize(154, 154); if (duration) this.time.delayedCall(duration, () => { if (this.playerState !== 'hurt') this.player.setTexture('mascot-main-mascot-clean'); }); }
+    mood(name, duration = 0) { this.setPlayerTexture(name); if (duration) this.time.delayedCall(duration, () => { if (this.playerState !== 'hurt') this.setPlayerTexture('main-mascot-clean'); }); }
 
     sfx(name) {
       if (!this.soundEnabled) return;
@@ -710,8 +758,18 @@
       const left = this.keys.left.isDown || this.keys.la.isDown || this.touch.left, right = this.keys.right.isDown || this.keys.ra.isDown || this.touch.right, up = this.keys.up.isDown || this.keys.ua.isDown || this.touch.up, down = this.keys.down.isDown || this.keys.da.isDown;
       const grounded = this.player.body.blocked.down || this.player.body.touching.down; if (grounded) this.lastGroundedAt = time;
       const ladder = this.ladders.find(zone => zone.contains(this.player.x, this.player.y));
-      if (ladder && (up || down || this.climbing)) { this.climbing = true; this.player.body.allowGravity = false; this.player.x = Phaser.Math.Linear(this.player.x, ladder.centerX, .25); this.player.setVelocityY(up ? -260 : down ? 260 : 0).setVelocityX(0); this.player.setTexture('mascot-running').setAngle(Math.sin(time * .012) * 4); }
-      else { this.climbing = false; this.player.body.allowGravity = true; this.player.setAngle(0); if (left && !right) { this.player.setAccelerationX(QA ? -3000 : -1900).setFlipX(true); if (grounded && time > this.dashingUntil) this.player.setTexture('mascot-running'); } else if (right && !left) { this.player.setAccelerationX(QA ? 3000 : 1900).setFlipX(false); if (grounded && time > this.dashingUntil) this.player.setTexture('mascot-running'); } else { this.player.setAccelerationX(0); if (grounded && time > this.dashingUntil) this.player.setTexture('mascot-main-mascot-clean'); } }
+      if (this.jumpQueuedUntil >= time && !(ladder && up)) this.performJump(grounded);
+      else if (this.jumpQueuedUntil && this.jumpQueuedUntil < time) this.jumpQueuedUntil = 0;
+      if (ladder && (up || down || this.climbing)) {
+        this.climbing = true; this.solidsCollider.active = false; this.player.body.allowGravity = false;
+        this.player.x = Phaser.Math.Linear(this.player.x, ladder.centerX, .25); this.player.setVelocityY(up ? -260 : down ? 260 : 0).setVelocityX(0); this.setPlayerTexture('running'); this.player.setAngle(Math.sin(time * .012) * 4);
+        if (up && this.player.y <= ladder.exitY + 8) { this.player.setPosition(ladder.centerX, ladder.exitY).setVelocity(0, 0); this.climbing = false; this.solidsCollider.active = true; this.player.body.allowGravity = true; }
+      } else {
+        this.climbing = false; this.solidsCollider.active = true; this.player.body.allowGravity = true; this.player.setAngle(0);
+        if (left && !right) { this.player.setAccelerationX(QA ? -3000 : -1900).setFlipX(true); if (grounded && time > this.dashingUntil) this.setPlayerTexture('running'); }
+        else if (right && !left) { this.player.setAccelerationX(QA ? 3000 : 1900).setFlipX(false); if (grounded && time > this.dashingUntil) this.setPlayerTexture('running'); }
+        else { this.player.setAccelerationX(0); if (grounded && time > this.dashingUntil) this.setPlayerTexture('main-mascot-clean'); }
+      }
       this.playerState = grounded ? 'ground' : 'air';
       this.movers.children.iterate(mover => { if (!mover?.active) return; if (mover.x <= mover.getData('min')) mover.setVelocityX(Math.abs(mover.body.velocity.x)); if (mover.x >= mover.getData('max')) mover.setVelocityX(-Math.abs(mover.body.velocity.x)); });
       this.fruits.children.iterate(fruit => { if (!fruit?.active) return; const phase = time * .0015 + fruit.getData('phase'); fruit.x = fruit.getData('baseX') + Math.sin(phase) * fruit.getData('range'); fruit.y = fruit.getData('baseY') + Math.cos(phase * 1.3) * 16; fruit.angle = Math.sin(phase) * 10; });
@@ -739,7 +797,11 @@
         if (theme === 3) hazard.setAlpha(.72 + Math.sin(phase * 2) * .28).setScale(hazard.getData('baseScaleX'), hazard.getData('baseScaleY') * (1 + Math.max(0, Math.sin(phase * 2)) * .22));
         if (theme === 4) hazard.setAngle(Math.sin(phase) * 7);
       });
-      this.shots.children.iterate(shot => { if (shot?.active && (time - shot.getData('born') > 2200 || shot.x < -100 || shot.x > WORLD_W + 100)) shot.destroy(); });
+      this.shots.children.iterate(shot => {
+        if (!shot?.active) return;
+        if (this.boss?.active && this.boss.getData('revealed') && this.boss.getData('alive') && Phaser.Geom.Intersects.RectangleToRectangle(shot.getBounds(), this.boss.getBounds())) this.hitBoss(shot, this.boss);
+        else if (time - shot.getData('born') > 2200 || shot.x < -100 || shot.x > WORLD_W + 100) shot.destroy();
+      });
       this.bossShots.children.iterate(shot => {
         if (!shot?.active) return;
         const type = shot.getData('type'), age = time - shot.getData('born');
@@ -750,7 +812,7 @@
         if (age > 5200 || shot.y > H + 100) shot.destroy();
       });
       if (this.player.x > WORLD_W / 2 && this.checkpointX < WORLD_W / 2) { this.checkpointX = WORLD_W / 2 + 90; S.lives = Math.min(MAX_LIVES, S.lives + 1); this.sfx('key'); this.banner('CHECKPOINT  •  HEART RESTORED', C.mint); }
-      if (this.player.y > 850) this.damage(this.player.x);
+      if (this.player.y > 790) this.damage(this.player.x);
       if (!this.boss.getData('revealed') && this.player.x > WORLD_W - 1900) this.revealBoss();
       if (this.boss?.active && this.boss.getData('alive') && this.boss.getData('revealed')) {
         const awake = this.boss.getData('awake'), phase = time * (.0019 + S.level * .00016), baseX = this.boss.getData('baseX'), baseY = this.boss.getData('baseY');
@@ -760,7 +822,7 @@
         if (S.level === 3) { this.boss.x = baseX + Math.sin(phase * 1.3) * (awake ? 95 : 18); this.boss.y = baseY - Math.abs(Math.sin(phase * 1.6)) * (awake ? 92 : 16); }
         if (S.level === 4) { this.boss.x = baseX + Math.sin(phase * 1.7) * (awake ? 132 : 22); this.boss.y = baseY + Math.sin(phase * 2.1) * (awake ? 34 : 14); }
       }
-      this.bossAttack(time); this.updateHud();
+      this.bossAttack(time); this.updateHud(); this.publishQaState(time);
     }
   }
 
